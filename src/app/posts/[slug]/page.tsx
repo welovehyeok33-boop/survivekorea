@@ -1,0 +1,175 @@
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { posts, getPostBySlug } from "@/data/posts";
+import { getCategoryById } from "@/data/categories";
+
+interface Props {
+  params: Promise<{ slug: string }>;
+}
+
+export async function generateStaticParams() {
+  return posts.map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
+  if (!post) return {};
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      images: [{ url: post.coverImage }],
+      type: "article",
+      publishedTime: post.publishedAt,
+    },
+    alternates: {
+      canonical: `/posts/${post.slug}`,
+    },
+  };
+}
+
+export default async function PostPage({ params }: Props) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
+  if (!post) notFound();
+
+  const cat = getCategoryById(post.category);
+
+  // Related posts: same category, exclude current
+  const related = posts
+    .filter((p) => p.category === post.category && p.slug !== post.slug)
+    .slice(0, 3);
+
+  return (
+    <article className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+      {/* Breadcrumb */}
+      <nav className="flex items-center gap-2 text-sm text-gray-400 mb-8">
+        <Link href="/" className="hover:text-gray-600 transition-colors">Home</Link>
+        <span>/</span>
+        {cat && (
+          <>
+            <Link href={`/category/${cat.slug}`} className="hover:text-gray-600 transition-colors">
+              {cat.icon} {cat.label}
+            </Link>
+            <span>/</span>
+          </>
+        )}
+        <span className="text-gray-600 line-clamp-1">{post.title}</span>
+      </nav>
+
+      {/* Category badge */}
+      {cat && (
+        <Link
+          href={`/category/${cat.slug}`}
+          className={`inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full text-white bg-gradient-to-r ${cat.gradient} mb-4`}
+        >
+          {cat.icon} {cat.label}
+        </Link>
+      )}
+
+      {/* Title */}
+      <h1 className="text-3xl sm:text-4xl font-black text-gray-900 leading-tight mt-3 mb-4">
+        {post.title}
+      </h1>
+
+      {/* Meta row */}
+      <div className="flex items-center gap-4 text-sm text-gray-400 mb-8 pb-8 border-b border-gray-100">
+        <span>{post.publishedAt}</span>
+        <span>·</span>
+        <span>{post.readTime} min read</span>
+        {post.tags && post.tags.length > 0 && (
+          <>
+            <span>·</span>
+            <div className="flex gap-2 flex-wrap">
+              {post.tags.map((tag) => (
+                <span key={tag} className="bg-gray-100 text-gray-500 text-xs px-2 py-0.5 rounded-full">
+                  #{tag}
+                </span>
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+
+      {/* Cover image */}
+      <div className="relative rounded-2xl overflow-hidden mb-10" style={{ aspectRatio: "16/9" }}>
+        <Image
+          src={post.coverImage}
+          alt={post.title}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+        />
+      </div>
+
+      {/* Article body placeholder */}
+      <div className="prose prose-gray max-w-none">
+        <p className="text-lg text-gray-600 leading-relaxed font-medium border-l-4 border-emerald-400 pl-4 mb-8">
+          {post.excerpt}
+        </p>
+
+        {/* Placeholder content — replace with real MDX/CMS content */}
+        <div className="space-y-4 text-gray-700 leading-relaxed">
+          <p>
+            This guide is coming soon. We&apos;re working on a full, detailed breakdown for this topic. Check back shortly — or browse other guides below.
+          </p>
+        </div>
+      </div>
+
+      {/* Related posts */}
+      {related.length > 0 && (
+        <section className="mt-16 pt-10 border-t border-gray-100">
+          <h2 className="text-xl font-black text-gray-900 mb-6">Related Guides</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {related.map((rp) => {
+              const rCat = getCategoryById(rp.category);
+              return (
+                <Link
+                  key={rp.id}
+                  href={`/posts/${rp.slug}`}
+                  className="group flex flex-col gap-3 rounded-2xl border border-gray-100 hover:border-gray-200 hover:shadow-md p-4 transition-all duration-200"
+                >
+                  <div className="relative rounded-xl overflow-hidden bg-gray-100" style={{ aspectRatio: "16/9" }}>
+                    <Image
+                      src={rp.coverImage}
+                      alt={rp.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="250px"
+                    />
+                  </div>
+                  {rCat && (
+                    <span className="text-xs font-bold uppercase tracking-wider" style={{ color: rCat.color }}>
+                      {rCat.icon} {rCat.label}
+                    </span>
+                  )}
+                  <h3 className="text-sm font-bold text-gray-900 leading-snug line-clamp-2 group-hover:text-emerald-700 transition-colors">
+                    {rp.title}
+                  </h3>
+                  <span className="text-xs text-gray-400">{rp.readTime} min read</span>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
+      {/* Back link */}
+      <div className="mt-12 text-center">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 hover:text-emerald-700 transition-colors"
+        >
+          ← Back to all guides
+        </Link>
+      </div>
+    </article>
+  );
+}
