@@ -11,50 +11,57 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return posts.map((p) => ({ slug: p.slug }));
+  return posts
+    .filter((p) => !!p.translations?.ko)
+    .map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getPostBySlug(slug);
-  if (!post) return {};
+  if (!post || !post.translations?.ko) return {};
 
-  const languages: Record<string, string> = { "x-default": `/posts/${post.slug}`, en: `/posts/${post.slug}` };
+  const t = post.translations.ko;
+  const languages: Record<string, string> = {
+    "x-default": `/posts/${post.slug}`,
+    en: `/posts/${post.slug}`,
+    ko: `/ko/posts/${post.slug}`,
+  };
   if (post.translations?.ja) languages.ja = `/ja/posts/${post.slug}`;
-  if (post.translations?.ko) languages.ko = `/ko/posts/${post.slug}`;
 
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: t.title,
+    description: t.excerpt,
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
+      title: t.title,
+      description: t.excerpt,
       images: [{ url: post.coverImage }],
       type: "article",
       publishedTime: post.publishedAt,
     },
     alternates: {
-      canonical: `/posts/${post.slug}`,
+      canonical: `/ko/posts/${post.slug}`,
       languages,
     },
   };
 }
 
-export default async function PostPage({ params }: Props) {
+export default async function KoPostPage({ params }: Props) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
-  if (!post) notFound();
+  if (!post || !post.translations?.ko) notFound();
 
+  const t = post.translations.ko;
   const cat = getCategoryById(post.category);
   const related = posts
-    .filter((p) => p.category === post.category && p.slug !== post.slug)
+    .filter((p) => p.category === post.category && p.slug !== post.slug && !!p.translations?.ko)
     .slice(0, 3);
 
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-gray-400 mb-8">
-        <Link href="/" className="hover:text-gray-600 transition-colors">Home</Link>
+        <Link href="/" className="hover:text-gray-600 transition-colors">홈</Link>
         <span>/</span>
         {cat && (
           <>
@@ -64,7 +71,7 @@ export default async function PostPage({ params }: Props) {
             <span>/</span>
           </>
         )}
-        <span className="text-gray-600 line-clamp-1">{post.title}</span>
+        <span className="text-gray-600 line-clamp-1">{t.title}</span>
       </nav>
 
       {/* Category badge */}
@@ -79,14 +86,14 @@ export default async function PostPage({ params }: Props) {
 
       {/* Title */}
       <h1 className="text-3xl sm:text-4xl font-black text-gray-900 leading-tight mt-3 mb-4">
-        {post.title}
+        {t.title}
       </h1>
 
       {/* Meta row */}
       <div className="flex items-center gap-4 text-sm text-gray-400 mb-6 pb-6 border-b border-gray-100">
         <span>{post.publishedAt}</span>
         <span>·</span>
-        <span>{post.readTime} min read</span>
+        <span>{post.readTime}분 읽기</span>
         {post.tags && post.tags.length > 0 && (
           <>
             <span>·</span>
@@ -104,7 +111,7 @@ export default async function PostPage({ params }: Props) {
       {/* Language switcher */}
       <LangSwitcher
         slug={post.slug}
-        currentLang="en"
+        currentLang="ko"
         hasJa={!!post.translations?.ja}
         hasKo={!!post.translations?.ko}
       />
@@ -113,7 +120,7 @@ export default async function PostPage({ params }: Props) {
       <div className="relative rounded-2xl overflow-hidden mb-10" style={{ aspectRatio: "16/9" }}>
         <Image
           src={post.coverImage}
-          alt={post.title}
+          alt={t.title}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, 768px"
@@ -124,14 +131,14 @@ export default async function PostPage({ params }: Props) {
       {/* Article body */}
       <div className="prose prose-gray max-w-none">
         <p className="text-lg text-gray-600 leading-relaxed font-medium border-l-4 pl-4 mb-8" style={{ borderColor: "#cd2e3a" }}>
-          {post.excerpt}
+          {t.excerpt}
         </p>
 
-        {post.content ? (
-          <div className="article-body" dangerouslySetInnerHTML={{ __html: post.content }} />
+        {t.content ? (
+          <div className="article-body" dangerouslySetInnerHTML={{ __html: t.content }} />
         ) : (
           <div className="space-y-4 text-gray-700 leading-relaxed">
-            <p>This guide is coming soon. We&apos;re working on a full, detailed breakdown for this topic. Check back shortly — or browse other guides below.</p>
+            <p>이 가이드는 곧 공개됩니다. 조금만 기다려 주세요.</p>
           </div>
         )}
       </div>
@@ -139,18 +146,19 @@ export default async function PostPage({ params }: Props) {
       {/* Related posts */}
       {related.length > 0 && (
         <section className="mt-16 pt-10 border-t border-gray-100">
-          <h2 className="text-xl font-black text-gray-900 mb-6">Related Guides</h2>
+          <h2 className="text-xl font-black text-gray-900 mb-6">관련 가이드</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {related.map((rp) => {
               const rCat = getCategoryById(rp.category);
+              const rt = rp.translations?.ko;
               return (
                 <Link
                   key={rp.id}
-                  href={`/posts/${rp.slug}`}
+                  href={`/ko/posts/${rp.slug}`}
                   className="group flex flex-col gap-3 rounded-2xl border border-gray-100 hover:border-gray-200 hover:shadow-md p-4 transition-all duration-200"
                 >
                   <div className="relative rounded-xl overflow-hidden bg-gray-100" style={{ aspectRatio: "16/9" }}>
-                    <Image src={rp.coverImage} alt={rp.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="250px" />
+                    <Image src={rp.coverImage} alt={rt?.title ?? rp.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="250px" />
                   </div>
                   {rCat && (
                     <span className="text-xs font-bold uppercase tracking-wider" style={{ color: rCat.color }}>
@@ -158,9 +166,9 @@ export default async function PostPage({ params }: Props) {
                     </span>
                   )}
                   <h3 className="text-sm font-bold text-gray-900 leading-snug line-clamp-2 group-hover:text-red-700 transition-colors">
-                    {rp.title}
+                    {rt?.title ?? rp.title}
                   </h3>
-                  <span className="text-xs text-gray-400">{rp.readTime} min read</span>
+                  <span className="text-xs text-gray-400">{rp.readTime}분 읽기</span>
                 </Link>
               );
             })}
@@ -171,7 +179,7 @@ export default async function PostPage({ params }: Props) {
       {/* Back link */}
       <div className="mt-12 text-center">
         <Link href="/" className="inline-flex items-center gap-2 text-sm font-semibold hover:opacity-80 transition-opacity" style={{ color: "#cd2e3a" }}>
-          ← Back to all guides
+          ← 전체 가이드로 돌아가기
         </Link>
       </div>
     </article>

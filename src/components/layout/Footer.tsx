@@ -9,11 +9,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link href="/" className="inline-flex items-center gap-2 group mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white text-sm font-black">
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-black" style={{ background: "linear-gradient(135deg, #cd2e3a, #b02535)" }}>
                 S
               </div>
               <span className="text-white text-lg font-black">
-                Survive<span className="text-emerald-400">Korea</span>
+                Survive<span style={{ color: "#e07880" }}>Korea</span>
               </span>
             </Link>
             <p className="text-sm leading-relaxed text-gray-500">

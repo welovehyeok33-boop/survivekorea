@@ -21,11 +21,11 @@ export default function Header() {
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0 group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white text-sm font-black shadow-sm group-hover:shadow-emerald-200 transition-shadow">
+          <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-black shadow-sm transition-shadow" style={{ background: "linear-gradient(135deg, #cd2e3a, #b02535)" }}>
             S
           </div>
           <span className="text-lg font-black tracking-tight text-gray-900">
-            Survive<span className="text-emerald-500">Korea</span>
+            Survive<span style={{ color: "#cd2e3a" }}>Korea</span>
           </span>
         </Link>
 
@@ -64,8 +64,9 @@ export default function Header() {
                     key={lang.code}
                     onClick={() => { setActiveLang(lang); setLangOpen(false); }}
                     className={`w-full text-left px-4 py-2 text-sm flex items-center gap-2 hover:bg-gray-50 transition-colors ${
-                      activeLang.code === lang.code ? "text-emerald-600 font-semibold" : "text-gray-700"
+                      activeLang.code === lang.code ? "font-semibold" : "text-gray-700"
                     }`}
+                  style={activeLang.code === lang.code ? { color: "#cd2e3a" } : {}}
                   >
                     <span>{lang.flag}</span>
                     <span>{lang.label}</span>
