@@ -9,8 +9,15 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link href="/" className="inline-flex items-center gap-2 group mb-4">
-              <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-black" style={{ background: "linear-gradient(135deg, #cd2e3a, #b02535)" }}>
-                S
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center overflow-hidden" style={{ background: "white", border: "1.5px solid #e5e7eb" }}>
+                <svg viewBox="0 0 32 32" width="26" height="26" xmlns="http://www.w3.org/2000/svg">
+                  <g transform="rotate(-45, 16, 16)">
+                    <circle cx="16" cy="16" r="15" fill="#1B4FA0"/>
+                    <path d="M16,1 A15,15 0 0,1 16,31 A7.5,7.5 0 0,1 16,16 A7.5,7.5 0 0,0 16,1Z" fill="#CD2E3A"/>
+                    <circle cx="16" cy="8.5" r="3.5" fill="#1B4FA0"/>
+                    <circle cx="16" cy="23.5" r="3.5" fill="#CD2E3A"/>
+                  </g>
+                </svg>
               </div>
               <span className="text-white text-lg font-black">
                 Survive<span style={{ color: "#e07880" }}>Korea</span>
