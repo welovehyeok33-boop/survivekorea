@@ -2,33 +2,10 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
 import { categories } from "@/data/categories";
-
-const languages = [
-  { code: "en", flag: "🇺🇸", label: "EN" },
-  { code: "ja", flag: "🇯🇵", label: "JA" },
-  { code: "ko", flag: "🇰🇷", label: "KO" },
-] as const;
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [langOpen, setLangOpen] = useState(false);
-
-  const pathname = usePathname() || "/";
-  // Detect language + slug from the current path.
-  // Patterns: /posts/[slug] (en), /ja/posts/[slug], /ko/posts/[slug]
-  const postMatch = pathname.match(/^\/(?:(ja|ko)\/)?posts\/(.+)$/);
-  const currentLangCode = postMatch ? (postMatch[1] ?? "en") : "en";
-  const slug = postMatch ? postMatch[2] : null;
-  const activeLang = languages.find((l) => l.code === currentLangCode) ?? languages[0];
-
-  // Where each language option should link to. Only article pages have JA/KO
-  // versions, so off an article we keep everything on the English site.
-  const hrefFor = (code: string) => {
-    if (!slug) return code === "en" ? "/" : null;
-    return code === "en" ? `/posts/${slug}` : `/${code}/posts/${slug}`;
-  };
 
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
@@ -65,61 +42,8 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Right: lang + hamburger */}
+        {/* Right: hamburger */}
         <div className="flex items-center gap-2">
-          {/* Language pill */}
-          <div className="relative">
-            <button
-              onClick={() => setLangOpen((v) => !v)}
-              className="flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-gray-900 border border-gray-200 hover:border-gray-300 rounded-full px-3 py-1.5 transition-all"
-            >
-              <span>{activeLang.flag}</span>
-              <span>{activeLang.label}</span>
-              <svg className="w-3 h-3 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            {langOpen && (
-              <div className="absolute right-0 mt-2 w-36 bg-white border border-gray-100 rounded-xl shadow-xl py-1 z-50">
-                {languages.map((lang) => {
-                  const href = hrefFor(lang.code);
-                  const isActive = activeLang.code === lang.code;
-                  const baseClass = `w-full text-left px-4 py-2 text-sm flex items-center gap-2 transition-colors ${
-                    isActive ? "font-semibold" : "text-gray-700"
-                  }`;
-                  const activeStyle = isActive ? { color: "#cd2e3a" } : {};
-
-                  // No translated version available for this page/language.
-                  if (!href) {
-                    return (
-                      <span
-                        key={lang.code}
-                        className={`${baseClass} text-gray-300 cursor-not-allowed`}
-                        title="No translation available for this page yet"
-                      >
-                        <span>{lang.flag}</span>
-                        <span>{lang.label}</span>
-                      </span>
-                    );
-                  }
-
-                  return (
-                    <Link
-                      key={lang.code}
-                      href={href}
-                      onClick={() => setLangOpen(false)}
-                      className={`${baseClass} hover:bg-gray-50`}
-                      style={activeStyle}
-                    >
-                      <span>{lang.flag}</span>
-                      <span>{lang.label}</span>
-                    </Link>
-                  );
-                })}
-              </div>
-            )}
-          </div>
-
           {/* Hamburger (mobile) */}
           <button
             onClick={() => setMenuOpen((v) => !v)}

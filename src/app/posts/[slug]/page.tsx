@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { posts, getPostBySlug } from "@/data/posts";
 import { getCategoryById } from "@/data/categories";
-import LangSwitcher from "@/components/ui/LangSwitcher";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -19,10 +18,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(slug);
   if (!post) return {};
 
-  const languages: Record<string, string> = { "x-default": `/posts/${post.slug}`, en: `/posts/${post.slug}` };
-  if (post.translations?.ja) languages.ja = `/ja/posts/${post.slug}`;
-  if (post.translations?.ko) languages.ko = `/ko/posts/${post.slug}`;
-
   return {
     title: post.title,
     description: post.excerpt,
@@ -35,7 +30,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     alternates: {
       canonical: `/posts/${post.slug}`,
-      languages,
     },
   };
 }
@@ -100,14 +94,6 @@ export default async function PostPage({ params }: Props) {
           </>
         )}
       </div>
-
-      {/* Language switcher */}
-      <LangSwitcher
-        slug={post.slug}
-        currentLang="en"
-        hasJa={!!post.translations?.ja}
-        hasKo={!!post.translations?.ko}
-      />
 
       {/* Cover image */}
       <div className="relative rounded-2xl overflow-hidden mb-10" style={{ aspectRatio: "16/9" }}>
