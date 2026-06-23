@@ -90,3 +90,14 @@ img {
   font-style: italic;
   color: #4b5563;
 }
+.article-body a {
+  color: #cd2e3a;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  transition: opacity 0.15s ease;
+}
+.article-body a:hover {
+  opacity: 0.75;
+}

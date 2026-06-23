@@ -8,12 +8,6 @@ export interface Category {
   description: string;
 }
 
-export interface PostTranslation {
-  title: string;
-  excerpt: string;
-  content?: string;
-}
-
 export interface Post {
   id: string;
   title: string;
@@ -26,8 +20,4 @@ export interface Post {
   featured?: boolean;
   tags?: string[];
   content?: string; // HTML content (English)
-  translations?: {
-    ja?: PostTranslation;
-    ko?: PostTranslation;
-  };
 }

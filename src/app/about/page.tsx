@@ -31,7 +31,25 @@ export default function AboutPage() {
             Most resources online are either tourist content (&quot;visit Gyeongbokgung!&quot;) or
             outdated forum threads that contradict each other. SurviveKorea was built to fill that
             gap: clear, current, step-by-step answers to the questions foreign residents actually
-            ask — written by someone who lives here and has navigated the system firsthand.
+            ask — written from the inside.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-lg font-bold text-gray-900 mb-3">Who&apos;s behind it</h2>
+          <p className="mb-3">
+            I&apos;m Korean, born and raised here, and I&apos;ve spent years helping foreign friends and
+            coworkers untangle the same things over and over — which bank will actually open an
+            account, what to say at the immigration office, how to read a lease before signing it.
+            After explaining 알뜰폰 phone plans and HiKorea visa extensions for the hundredth time, I
+            started writing it all down.
+          </p>
+          <p>
+            That&apos;s the perspective behind every guide here: a local who knows how the system really
+            works, writing for the foreigner standing in line trying to figure it out. I&apos;m not a
+            lawyer or an immigration agent, so for anything official I&apos;ll always point you to the
+            government source — but I can tell you what the process actually feels like and where
+            people get tripped up.
           </p>
         </section>
 
@@ -85,9 +103,9 @@ export default function AboutPage() {
           <h2 className="text-lg font-bold text-gray-900 mb-3">Who it&apos;s for</h2>
           <p>
             English teachers, exchange students, remote workers, spouses on family visas,
-            engineers on E-7s, digital nomads — anyone living in Korea beyond a short trip. We
-            also publish in <strong>Korean</strong> and <strong>Japanese</strong> so more
-            residents can use the guides in the language they&apos;re comfortable with.
+            engineers on E-7s, digital nomads — anyone living in Korea beyond a short trip. If
+            you&apos;re past the tourist stage and trying to actually build a life here, these guides
+            are for you.
           </p>
         </section>
 
