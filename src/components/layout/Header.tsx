@@ -6,8 +6,8 @@ import { categories } from "@/data/categories";
 
 const languages = [
   { code: "en", flag: "🇺🇸", label: "EN" },
-  { code: "ja", flag: "🇯🇵", label: "JP" },
-  { code: "zh", flag: "🇨🇳", label: "ZH" },
+  { code: "ja", flag: "🇯🇵", label: "JA" },
+  { code: "ko", flag: "🇰🇷", label: "KO" },
 ];
 
 export default function Header() {
