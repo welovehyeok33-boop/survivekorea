@@ -54,6 +54,7 @@ export default function Footer() {
                 { href: "/about", label: "About" },
                 { href: "/contact", label: "Contact" },
                 { href: "/privacy-policy", label: "Privacy Policy" },
+                { href: "/disclaimer", label: "Disclaimer" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm hover:text-white transition-colors">
