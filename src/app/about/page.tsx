@@ -38,11 +38,11 @@ export default function AboutPage() {
         <section>
           <h2 className="text-lg font-bold text-gray-900 mb-3">Who&apos;s behind it</h2>
           <p className="mb-3">
-            I&apos;m Korean, born and raised here, and I&apos;ve spent years helping foreign friends and
-            coworkers untangle the same things over and over — which bank will actually open an
-            account, what to say at the immigration office, how to read a lease before signing it.
-            After explaining 알뜰폰 phone plans and HiKorea visa extensions for the hundredth time, I
-            started writing it all down.
+            I&apos;m <strong>Joon Shin</strong> — Korean, born and raised in Seoul — and I&apos;ve spent
+            years helping foreign friends and coworkers untangle the same things over and over:
+            which bank will actually open an account, what to say at the immigration office, how to
+            read a lease before signing it. After explaining 알뜰폰 phone plans and HiKorea visa
+            extensions for the hundredth time, I started writing it all down.
           </p>
           <p>
             That&apos;s the perspective behind every guide here: a local who knows how the system really

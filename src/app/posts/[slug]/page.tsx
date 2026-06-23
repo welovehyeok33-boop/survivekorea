@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { posts, getPostBySlug } from "@/data/posts";
 import { getCategoryById } from "@/data/categories";
+import { author } from "@/data/author";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -78,6 +79,8 @@ export default async function PostPage({ params }: Props) {
 
       {/* Meta row */}
       <div className="flex items-center gap-4 text-sm text-gray-400 mb-6 pb-6 border-b border-gray-100">
+        <span className="font-semibold text-gray-600">By {author.name}</span>
+        <span>·</span>
         <span>{post.publishedAt}</span>
         <span>·</span>
         <span>{post.readTime} min read</span>
@@ -121,6 +124,40 @@ export default async function PostPage({ params }: Props) {
           </div>
         )}
       </div>
+
+      {/* Author box */}
+      <aside className="mt-12 flex items-start gap-4 rounded-2xl border border-gray-100 bg-gray-50 p-5 sm:p-6">
+        {author.avatar ? (
+          <Image
+            src={author.avatar}
+            alt={author.name}
+            width={56}
+            height={56}
+            className="w-14 h-14 rounded-full object-cover shrink-0"
+          />
+        ) : (
+          <div
+            className="w-14 h-14 rounded-full shrink-0 flex items-center justify-center text-white font-black text-lg"
+            style={{ background: "#cd2e3a" }}
+          >
+            {author.name.split(" ").map((w) => w[0]).join("").slice(0, 2)}
+          </div>
+        )}
+        <div>
+          <div className="flex items-center gap-2">
+            <span className="font-bold text-gray-900">{author.name}</span>
+            <span className="text-xs text-gray-400">· {author.location}</span>
+          </div>
+          <p className="text-sm text-gray-600 leading-relaxed mt-1">{author.bio}</p>
+          <Link
+            href="/about"
+            className="inline-block text-xs font-semibold mt-2 hover:opacity-80 transition-opacity"
+            style={{ color: "#cd2e3a" }}
+          >
+            More about SurviveKorea →
+          </Link>
+        </div>
+      </aside>
 
       {/* Related posts */}
       {related.length > 0 && (
