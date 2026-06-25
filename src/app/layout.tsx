@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.survivekorea.com"),
   title: {
     default: "SurviveKorea — Long-Term Living Guide for Foreigners",
     template: "%s | SurviveKorea",
@@ -14,6 +15,9 @@ export const metadata: Metadata = {
     siteName: "SurviveKorea",
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 
