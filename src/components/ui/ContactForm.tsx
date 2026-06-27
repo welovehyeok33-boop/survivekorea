@@ -2,40 +2,60 @@
 
 import { useState } from "react";
 
+const CONTACT_EMAIL = "welovehyeok33@gmail.com";
+
+const SUBJECTS: Record<string, string> = {
+  question: "Question about living in Korea",
+  correction: "Found incorrect / outdated info",
+  suggestion: "Topic suggestion",
+  other: "Other",
+};
+
 export default function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [opened, setOpened] = useState(false);
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setStatus("sending");
+    const data = new FormData(e.currentTarget);
+    const name = (data.get("name") as string)?.trim() || "";
+    const email = (data.get("email") as string)?.trim() || "";
+    const subjectKey = (data.get("subject") as string) || "other";
+    const message = (data.get("message") as string)?.trim() || "";
 
-    const form = e.currentTarget;
-    const data = new FormData(form);
+    const subject = `[SurviveKorea] ${SUBJECTS[subjectKey] ?? "Message"}`;
+    const body = [
+      `Name: ${name}`,
+      email ? `Email: ${email}` : null,
+      "",
+      message,
+    ]
+      .filter((l) => l !== null)
+      .join("\n");
 
-    try {
-      const res = await fetch("https://formspree.io/f/xpwzgkvj", {
-        method: "POST",
-        body: data,
-        headers: { Accept: "application/json" },
-      });
-
-      if (res.ok) {
-        setStatus("sent");
-        form.reset();
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+    setOpened(true);
   }
 
-  if (status === "sent") {
+  if (opened) {
     return (
       <div className="rounded-2xl border border-gray-100 bg-gray-50 px-8 py-12 text-center">
-        <div className="text-3xl mb-3">✅</div>
-        <p className="font-bold text-gray-900 mb-1">Message sent!</p>
-        <p className="text-sm text-gray-500">I&apos;ll get back to you as soon as possible.</p>
+        <div className="text-3xl mb-3">✉️</div>
+        <p className="font-bold text-gray-900 mb-1">Your email app should be opening…</p>
+        <p className="text-sm text-gray-500">
+          Just hit send in your mail app. If nothing opened, email me directly at{" "}
+          <a href={`mailto:${CONTACT_EMAIL}`} className="underline" style={{ color: "#cd2e3a" }}>
+            {CONTACT_EMAIL}
+          </a>
+          .
+        </p>
+        <button
+          onClick={() => setOpened(false)}
+          className="mt-5 text-xs font-semibold text-gray-400 hover:text-gray-600 transition-colors"
+        >
+          ← Back to the form
+        </button>
       </div>
     );
   }
@@ -53,11 +73,12 @@ export default function ContactForm() {
         />
       </div>
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+        <label className="block text-sm font-medium text-gray-700 mb-1">
+          Email <span className="text-gray-400 font-normal">(optional)</span>
+        </label>
         <input
           type="email"
           name="email"
-          required
           placeholder="your@email.com"
           className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition-all"
         />
@@ -80,26 +101,22 @@ export default function ContactForm() {
           name="message"
           required
           rows={5}
-          placeholder="What&apos;s on your mind?"
+          placeholder="What's on your mind?"
           className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:border-transparent resize-none transition-all"
         />
       </div>
 
-      {status === "error" && (
-        <p className="text-sm text-red-600">
-          Something went wrong. Please try again or email{" "}
-          <a href="mailto:welovehyeok33@gmail.com" className="underline">welovehyeok33@gmail.com</a>
-        </p>
-      )}
-
       <button
         type="submit"
-        disabled={status === "sending"}
-        className="w-full text-white px-6 py-3 rounded-xl text-sm font-bold hover:opacity-90 transition-all disabled:opacity-50"
+        className="w-full text-white px-6 py-3 rounded-xl text-sm font-bold hover:opacity-90 transition-all"
         style={{ background: "#cd2e3a" }}
       >
-        {status === "sending" ? "Sending…" : "Send Message →"}
+        Send Message →
       </button>
+
+      <p className="text-xs text-gray-400 text-center">
+        This opens your email app with the message ready to send.
+      </p>
     </form>
   );
 }
