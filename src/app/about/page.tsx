@@ -164,8 +164,8 @@ export default function AboutPage() {
             Questions, corrections, or a topic you wish we&apos;d cover? Reach out on the{" "}
             <Link href="/contact" className="underline" style={{ color: "#cd2e3a" }}>Contact page</Link>{" "}
             or email{" "}
-            <a href="mailto:welovehyeok33@gmail.com" className="underline" style={{ color: "#cd2e3a" }}>
-              welovehyeok33@gmail.com
+            <a href="mailto:hyeokk763@gmail.com" className="underline" style={{ color: "#cd2e3a" }}>
+              hyeokk763@gmail.com
             </a>. We read every message.
           </p>
         </section>

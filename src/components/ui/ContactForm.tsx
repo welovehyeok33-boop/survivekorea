@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const CONTACT_EMAIL = "welovehyeok33@gmail.com";
+const CONTACT_EMAIL = "hyeokk763@gmail.com";
 
 const SUBJECTS: Record<string, string> = {
   question: "Question about living in Korea",

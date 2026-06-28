@@ -101,8 +101,8 @@ export default function DisclaimerPage() {
               Contact page
             </Link>{" "}
             or email{" "}
-            <a href="mailto:welovehyeok33@gmail.com" className="underline" style={{ color: "#cd2e3a" }}>
-              welovehyeok33@gmail.com
+            <a href="mailto:hyeokk763@gmail.com" className="underline" style={{ color: "#cd2e3a" }}>
+              hyeokk763@gmail.com
             </a>.
           </p>
         </section>

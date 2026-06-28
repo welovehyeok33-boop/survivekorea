@@ -19,8 +19,8 @@ export default function ContactPage() {
 
       <p className="mt-8 text-xs text-gray-400 text-center">
         Or email directly:{" "}
-        <a href="mailto:welovehyeok33@gmail.com" className="underline hover:text-gray-600">
-          welovehyeok33@gmail.com
+        <a href="mailto:hyeokk763@gmail.com" className="underline hover:text-gray-600">
+          hyeokk763@gmail.com
         </a>
       </p>
     </div>

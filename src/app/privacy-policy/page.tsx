@@ -156,7 +156,7 @@ export default function PrivacyPolicyPage() {
           <p>
             Questions about this Privacy Policy? Visit our{" "}
             <a href="/contact" className="underline hover:text-gray-900" style={{ color: "#cd2e3a" }}>Contact page</a> or email us directly at{" "}
-            <a href="mailto:welovehyeok33@gmail.com" className="underline hover:text-gray-900" style={{ color: "#cd2e3a" }}>welovehyeok33@gmail.com</a>.
+            <a href="mailto:hyeokk763@gmail.com" className="underline hover:text-gray-900" style={{ color: "#cd2e3a" }}>hyeokk763@gmail.com</a>.
           </p>
         </section>
 
