@@ -1,7 +1,7 @@
 // Single source of truth for the site author.
 // Change `name`, `bio`, etc. here and it updates every byline and the About page.
 export const author = {
-  name: "Joon Shin",
+  name: "Joon Shin (신준)",
   // Short byline-friendly role
   role: "Seoul native · back from NYC",
   // Bio shown in the author box under each article and on the About page
