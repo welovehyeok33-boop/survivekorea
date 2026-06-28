@@ -120,3 +120,26 @@ img {
   line-height: 1.4;
   color: #9ca3af;
 }
+.article-body .post-sources {
+  margin-top: 2.5rem;
+  padding: 1rem 1.25rem;
+  background: #f9fafb;
+  border: 1px solid #f0f0f0;
+  border-left: 3px solid #cd2e3a;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #6b7280;
+}
+.article-body .post-sources strong {
+  color: #374151;
+}
+.article-body .post-sources p {
+  margin-bottom: 0.5rem;
+}
+.article-body .post-sources p:last-child {
+  margin-bottom: 0;
+}
+.article-body .post-sources ul {
+  margin-bottom: 0.5rem;
+}
