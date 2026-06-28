@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { categories } from "@/data/categories";
+import { author } from "@/data/author";
 
 export const metadata: Metadata = {
   title: "About – SurviveKorea",
@@ -37,19 +39,52 @@ export default function AboutPage() {
 
         <section>
           <h2 className="text-lg font-bold text-gray-900 mb-3">Who&apos;s behind it</h2>
+
+          {/* Author card */}
+          <div className="flex items-center gap-4 rounded-2xl border border-gray-100 bg-gray-50 p-5 mb-5">
+            {author.avatar ? (
+              <Image
+                src={author.avatar}
+                alt={author.name}
+                width={64}
+                height={64}
+                className="w-16 h-16 rounded-full object-cover shrink-0"
+              />
+            ) : (
+              <div
+                className="w-16 h-16 rounded-full shrink-0 flex items-center justify-center text-white font-black text-xl"
+                style={{ background: "#cd2e3a" }}
+              >
+                {author.name.split(" ").map((w) => w[0]).join("").slice(0, 2)}
+              </div>
+            )}
+            <div>
+              <div className="font-bold text-gray-900">{author.name}</div>
+              <div className="text-sm text-gray-500">{author.role}</div>
+              <div className="text-xs text-gray-400 mt-0.5">{author.location}</div>
+            </div>
+          </div>
+
           <p className="mb-3">
-            I&apos;m <strong>Joon Shin</strong> — Korean, born and raised in Seoul — and I&apos;ve spent
-            years helping foreign friends and coworkers untangle the same things over and over:
-            which bank will actually open an account, what to say at the immigration office, how to
-            read a lease before signing it. After explaining 알뜰폰 phone plans and HiKorea visa
-            extensions for the hundredth time, I started writing it all down.
+            I&apos;m <strong>Joon Shin</strong> — a Seoul native, 20-plus years in this city. In my
+            late twenties I moved to <strong>New York</strong> for work, and living abroad flipped my
+            perspective: I finally saw my own country through a foreigner&apos;s eyes — which forms to
+            bring, which lines to stand in, what nobody bothers to explain because locals just
+            <em>know</em> it.
+          </p>
+          <p className="mb-3">
+            Now I&apos;m back in Seoul. Between that outside lens and a lifetime of knowing how things
+            actually work here, I kept ending up as the person friends and coworkers from abroad
+            messaged first — which bank will really open an account, what to say at the immigration
+            office, how to read a 전세 lease before signing it. After explaining 알뜰폰 phone plans and
+            HiKorea visa extensions for the hundredth time, I started writing it all down.
           </p>
           <p>
-            That&apos;s the perspective behind every guide here: a local who knows how the system really
-            works, writing for the foreigner standing in line trying to figure it out. I&apos;m not a
-            lawyer or an immigration agent, so for anything official I&apos;ll always point you to the
-            government source — but I can tell you what the process actually feels like and where
-            people get tripped up.
+            That&apos;s the perspective behind every guide here: a local who knows the system, who&apos;s
+            also lived as a foreigner abroad, writing for the person standing in line trying to figure
+            it out. I&apos;m not a lawyer or an immigration agent, so for anything official I&apos;ll always
+            point you to the government source — but I can tell you what the process actually feels
+            like and where people get tripped up.
           </p>
         </section>
 
