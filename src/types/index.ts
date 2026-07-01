@@ -16,6 +16,7 @@ export interface Post {
   coverImage: string;
   category: string;
   publishedAt: string;
+  updatedAt?: string;
   readTime: number;
   featured?: boolean;
   tags?: string[];

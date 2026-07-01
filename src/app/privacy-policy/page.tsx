@@ -84,7 +84,7 @@ export default function PrivacyPolicyPage() {
         <section>
           <h2 className="text-base font-bold text-gray-800 mb-2">4. Google Analytics</h2>
           <p>
-            We use <strong>Google Analytics</strong> to understand how visitors interact with the site (e.g. which articles are most useful, where visitors come from). This data is aggregated and anonymous — we cannot identify you personally.
+            We may use <strong>Google Analytics</strong> to understand how visitors interact with the site (e.g. which articles are most useful, where visitors come from). Where it is enabled, this data is aggregated and anonymous — we cannot identify you personally.
           </p>
           <p className="mt-2">
             You can opt out of Google Analytics tracking by installing the{" "}
@@ -103,7 +103,7 @@ export default function PrivacyPolicyPage() {
         <section>
           <h2 className="text-base font-bold text-gray-800 mb-2">5. Cookies</h2>
           <p>
-            Cookies are small text files stored on your device. This site uses cookies through Google AdSense and Google Analytics. You can control or delete cookies at any time via your browser settings.
+            Cookies are small text files stored on your device. This site may use cookies through third-party services such as Google AdSense and Google Analytics. You can control or delete cookies at any time via your browser settings.
           </p>
           <p className="mt-2">Common cookie controls by browser:</p>
           <ul className="list-disc pl-5 mt-1 space-y-1">

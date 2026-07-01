@@ -28,6 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [{ url: post.coverImage }],
       type: "article",
       publishedTime: post.publishedAt,
+      ...(post.updatedAt ? { modifiedTime: post.updatedAt } : {}),
     },
     alternates: {
       canonical: `/posts/${post.slug}`,
@@ -82,6 +83,12 @@ export default async function PostPage({ params }: Props) {
         <span className="font-semibold text-gray-600">By {author.name}</span>
         <span>·</span>
         <span>{post.publishedAt}</span>
+        {post.updatedAt && (
+          <>
+            <span>·</span>
+            <span>Updated {post.updatedAt}</span>
+          </>
+        )}
         <span>·</span>
         <span>{post.readTime} min read</span>
         {post.tags && post.tags.length > 0 && (
