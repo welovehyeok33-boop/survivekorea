@@ -21,6 +21,32 @@ export const metadata: Metadata = {
   },
 };
 
+const siteSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.survivekorea.com/#organization",
+      name: "SurviveKorea",
+      url: "https://www.survivekorea.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.survivekorea.com/icon.svg",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.survivekorea.com/#website",
+      url: "https://www.survivekorea.com",
+      name: "SurviveKorea",
+      description:
+        "Real, practical tips for foreigners living long-term in Korea. Housing, visas, banking, health, transport, and everything in between.",
+      publisher: { "@id": "https://www.survivekorea.com/#organization" },
+      inLanguage: "en",
+    },
+  ],
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="h-full">
@@ -29,6 +55,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3294285861978354"
           crossOrigin="anonymous"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
         />
       </head>
       <body className="min-h-full flex flex-col antialiased bg-white text-gray-900">
