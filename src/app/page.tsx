@@ -1,7 +1,22 @@
+import type { Metadata } from "next";
 import ArticleCard from "@/components/ui/ArticleCard";
 import PostGrid from "@/components/sections/PostGrid";
 import CategoryGrid from "@/components/sections/CategoryGrid";
 import { getFeaturedPost } from "@/data/posts";
+
+export const metadata: Metadata = {
+  title: "SurviveKorea — Long-Term Living Guide for Foreigners",
+  description:
+    "Practical, first-hand guides for foreigners living long-term in Korea — housing, visas, banking, healthcare, transport, and daily life. Written by a Seoul local.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "SurviveKorea — Long-Term Living Guide for Foreigners",
+    description:
+      "Practical, first-hand guides for foreigners living long-term in Korea — housing, visas, banking, healthcare, transport, and daily life.",
+    url: "/",
+    type: "website",
+  },
+};
 
 export default function Home() {
   const featured = getFeaturedPost();
