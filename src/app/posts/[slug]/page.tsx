@@ -75,11 +75,39 @@ export default async function PostPage({ params }: Props) {
     },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+      ...(cat
+        ? [
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: cat.label,
+              item: `${BASE_URL}/category/${cat.slug}`,
+            },
+          ]
+        : []),
+      {
+        "@type": "ListItem",
+        position: cat ? 3 : 2,
+        name: post.title,
+        item: `${BASE_URL}/posts/${post.slug}`,
+      },
+    ],
+  };
+
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-gray-400 mb-8">
