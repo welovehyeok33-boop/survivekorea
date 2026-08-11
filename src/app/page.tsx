@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ArticleCard from "@/components/ui/ArticleCard";
 import PostGrid from "@/components/sections/PostGrid";
+import DailyNews from "@/components/sections/DailyNews";
 import { getFeaturedPost } from "@/data/posts";
 
 export const metadata: Metadata = {
@@ -26,6 +27,9 @@ export default function Home() {
       <h1 className="sr-only">
         한국에서 살아남기 — 중장년에게 꼭 필요한 정보들
       </h1>
+
+      {/* ── Daily-news ticker ── */}
+      <DailyNews />
 
       {/* ── Featured article — straight into the content, no hero ── */}
       {featured && (

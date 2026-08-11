@@ -51,6 +51,22 @@ img {
   border-radius: 3px;
 }
 
+/* Daily-news marquee — auto-scrolls recent posts, pauses on hover */
+@keyframes dailyNewsScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.daily-news-track {
+  animation: dailyNewsScroll 45s linear infinite;
+  will-change: transform;
+}
+.daily-news:hover .daily-news-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .daily-news-track { animation: none; }
+}
+
 /* Article body styles — sized up for a 40·50·60대 readership */
 .article-body {
   color: #374151;
