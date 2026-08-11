@@ -18,6 +18,14 @@ export const metadata: Metadata = {
   },
 };
 
+const popularLinks = [
+  { label: "기초연금", href: "/posts/gichoyeongeum-2026-guide" },
+  { label: "국민연금 수령액", href: "/posts/gungmin-yeongeum-yesang-suryeongaek" },
+  { label: "정부지원금·복지", href: "/posts/jeongbu-jiwongeum-bokji-total" },
+  { label: "무릎·관절 건강", href: "/posts/jungjangnyeon-mureup-gwanjeol-geongang" },
+  { label: "스마트폰 기초", href: "/posts/smartphone-kiosk-kakaotalk-guide" },
+];
+
 export default function Home() {
   const featured = getFeaturedPost();
 
@@ -43,17 +51,36 @@ export default function Home() {
             </span>
           </h1>
 
-          <p className="mt-6 text-base md:text-lg max-w-xl mx-auto leading-relaxed" style={{ color: "#9ba8c0" }}>
+          <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: "#c2ccdf" }}>
             기초연금·국민연금·정부지원금·건강·스마트폰·재취업까지. 40·50·60대가 실제로 쓸 수 있는 정보만, 부모님께 설명하듯 하나하나 짚어 드립니다.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 mt-8">
-            <a href="#guides" className="text-white font-bold px-6 py-3 rounded-full transition-all text-sm hover:opacity-90" style={{ background: "#cd2e3a", boxShadow: "0 4px 18px rgba(205,46,58,0.25)" }}>
+          <div className="flex flex-wrap items-center justify-center gap-3 mt-9">
+            <a href="#guides" className="text-white font-bold px-7 py-3.5 rounded-full transition-all text-base hover:opacity-90" style={{ background: "#cd2e3a", boxShadow: "0 4px 18px rgba(205,46,58,0.25)" }}>
               정보 둘러보기
             </a>
-            <a href="/about" className="font-semibold px-6 py-3 rounded-full transition-all text-sm border hover:bg-white/10" style={{ color: "#c8d4e8", borderColor: "rgba(255,255,255,0.15)" }}>
+            <a href="/about" className="font-semibold px-7 py-3.5 rounded-full transition-all text-base border hover:bg-white/10" style={{ color: "#c8d4e8", borderColor: "rgba(255,255,255,0.15)" }}>
               사이트 소개
             </a>
+          </div>
+
+          {/* Popular quick links — jump straight to the most-searched topics */}
+          <div className="mt-10 flex flex-col items-center gap-3">
+            <span className="text-sm font-semibold" style={{ color: "#8592ad" }}>
+              지금 많이 찾는 정보
+            </span>
+            <div className="flex flex-wrap items-center justify-center gap-2.5">
+              {popularLinks.map((l) => (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  className="text-[15px] font-semibold px-4 py-2 rounded-full border transition-all hover:bg-white/10"
+                  style={{ color: "#d4dcec", borderColor: "rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.04)" }}
+                >
+                  {l.label}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
