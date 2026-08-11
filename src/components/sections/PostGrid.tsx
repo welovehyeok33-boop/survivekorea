@@ -29,8 +29,8 @@ export default function PostGrid() {
       {/* Header row */}
       <div className="flex items-end justify-between mb-6">
         <div>
-          <p className="text-xs font-bold uppercase tracking-widest text-emerald-500 mb-1">Latest guides</p>
-          <h2 className="text-2xl font-black text-gray-900">Trending Now</h2>
+          <p className="text-xs font-bold uppercase tracking-widest text-emerald-500 mb-1">최신 정보</p>
+          <h2 className="text-2xl font-black text-gray-900">지금 많이 보는 글</h2>
         </div>
       </div>
 
@@ -49,8 +49,8 @@ export default function PostGrid() {
       ) : (
         <div className="flex flex-col items-center justify-center py-20 text-center">
           <span className="text-5xl mb-4">🔍</span>
-          <p className="text-gray-400 font-medium">No guides in this category yet.</p>
-          <p className="text-gray-300 text-sm mt-1">Check back soon!</p>
+          <p className="text-gray-400 font-medium">아직 이 카테고리에 글이 없습니다.</p>
+          <p className="text-gray-300 text-sm mt-1">곧 새 글로 찾아뵙겠습니다!</p>
         </div>
       )}
 
@@ -61,7 +61,7 @@ export default function PostGrid() {
             onClick={() => setVisibleCount((n) => n + PAGE_SIZE)}
             className="group flex items-center gap-2 px-8 py-3 rounded-full border-2 border-gray-200 text-sm font-bold text-gray-600 hover:border-emerald-400 hover:text-emerald-600 hover:bg-emerald-50 transition-all duration-200"
           >
-            Load more guides
+            글 더 보기
             <svg className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
             </svg>

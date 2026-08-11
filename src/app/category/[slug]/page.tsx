@@ -18,11 +18,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!cat) return {};
 
   return {
-    title: `${cat.label} — Korea Living Guide`,
-    description: `${cat.description}. Practical guides for foreigners living long-term in Korea.`,
+    title: `${cat.label} — 한국에서 살아남기`,
+    description: `${cat.description}. 중장년이 실제로 쓸 수 있게 쉽게 풀어 드립니다.`,
     alternates: { canonical: `/category/${cat.slug}` },
     openGraph: {
-      title: `${cat.label} — SurviveKorea`,
+      title: `${cat.label} — 한국에서 살아남기`,
       description: cat.description,
       type: "website",
     },
@@ -48,13 +48,13 @@ export default async function CategoryPage({ params }: Props) {
               {cat.icon}
             </div>
             <div>
-              <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">Category</p>
+              <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">카테고리</p>
               <h1 className="text-3xl sm:text-4xl font-black text-gray-900">{cat.label}</h1>
             </div>
           </div>
           <p className="text-gray-500 text-base max-w-xl mt-2">{cat.description}</p>
           <p className="text-sm font-semibold mt-4" style={{ color: cat.color }}>
-            {catPosts.length} guide{catPosts.length !== 1 ? "s" : ""}
+            글 {catPosts.length}개
           </p>
         </div>
       </section>
@@ -70,15 +70,15 @@ export default async function CategoryPage({ params }: Props) {
         ) : (
           <div className="flex flex-col items-center justify-center py-24 text-center">
             <span className="text-6xl mb-4">{cat.icon}</span>
-            <p className="text-gray-400 font-semibold text-lg">No guides yet in this category.</p>
-            <p className="text-gray-300 text-sm mt-1">Check back soon — we&apos;re writing!</p>
+            <p className="text-gray-400 font-semibold text-lg">아직 이 카테고리에 글이 없습니다.</p>
+            <p className="text-gray-300 text-sm mt-1">곧 새 글로 찾아뵙겠습니다!</p>
           </div>
         )}
       </section>
 
       {/* Other categories */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-10 border-t border-gray-100">
-        <h2 className="text-lg font-black text-gray-900 mb-5">Browse Other Topics</h2>
+        <h2 className="text-lg font-black text-gray-900 mb-5">다른 주제 둘러보기</h2>
         <div className="flex flex-wrap gap-3">
           {otherCategories.map((c) => (
             <a

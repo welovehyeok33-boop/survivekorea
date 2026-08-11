@@ -45,7 +45,7 @@ export default function ArticleCard({ post, size = "default" }: Props) {
             {post.excerpt}
           </p>
           <div className="flex items-center gap-3 mt-4">
-            <span className="text-white/60 text-xs">{post.readTime} min read</span>
+            <span className="text-white/60 text-xs">읽는 시간 {post.readTime}분</span>
             <span className="text-white/30">·</span>
             <span className="text-white/60 text-xs">{post.publishedAt}</span>
           </div>
@@ -54,7 +54,7 @@ export default function ArticleCard({ post, size = "default" }: Props) {
         {/* hover CTA */}
         <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-4 py-2 text-white text-sm font-semibold">
-            Read →
+읽어보기 →
           </div>
         </div>
       </Link>
@@ -86,7 +86,7 @@ export default function ArticleCard({ post, size = "default" }: Props) {
           <h3 className="font-bold text-gray-900 text-sm leading-snug line-clamp-2 group-hover:text-emerald-700 transition-colors">
             {post.title}
           </h3>
-          <span className="text-gray-400 text-xs mt-1.5">{post.readTime} min</span>
+          <span className="text-gray-400 text-xs mt-1.5">{post.readTime}분</span>
         </div>
       </Link>
     );
@@ -123,9 +123,9 @@ export default function ArticleCard({ post, size = "default" }: Props) {
           {post.excerpt}
         </p>
         <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-50">
-          <span className="text-gray-400 text-xs">{post.readTime} min read</span>
+          <span className="text-gray-400 text-xs">읽는 시간 {post.readTime}분</span>
           <span className="text-emerald-600 text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
-            Read more →
+자세히 보기 →
           </span>
         </div>
       </div>

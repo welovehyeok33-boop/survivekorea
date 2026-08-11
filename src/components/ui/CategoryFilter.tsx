@@ -25,7 +25,7 @@ export default function CategoryFilter({ onFilter }: Props) {
             : "bg-white text-gray-500 border-gray-200 hover:border-gray-400 hover:text-gray-700"
         }`}
       >
-        All
+        전체
       </button>
 
       {categories.map((cat) => (

@@ -55,7 +55,7 @@ export default async function PostPage({ params }: Props) {
     image: [post.coverImage],
     datePublished: post.publishedAt,
     dateModified: post.updatedAt ?? post.publishedAt,
-    inLanguage: "en",
+    inLanguage: "ko",
     author: {
       "@type": "Person",
       name: author.name,
@@ -63,7 +63,7 @@ export default async function PostPage({ params }: Props) {
     },
     publisher: {
       "@type": "Organization",
-      name: "SurviveKorea",
+      name: "한국에서 살아남기",
       logo: {
         "@type": "ImageObject",
         url: `${BASE_URL}/icon.svg`,
@@ -79,7 +79,7 @@ export default async function PostPage({ params }: Props) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+      { "@type": "ListItem", position: 1, name: "홈", item: BASE_URL },
       ...(cat
         ? [
             {
@@ -111,7 +111,7 @@ export default async function PostPage({ params }: Props) {
       />
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-gray-400 mb-8">
-        <Link href="/" className="hover:text-gray-600 transition-colors">Home</Link>
+        <Link href="/" className="hover:text-gray-600 transition-colors">홈</Link>
         <span>/</span>
         {cat && (
           <>
@@ -141,17 +141,17 @@ export default async function PostPage({ params }: Props) {
 
       {/* Meta row */}
       <div className="flex items-center gap-4 text-sm text-gray-400 mb-6 pb-6 border-b border-gray-100">
-        <span className="font-semibold text-gray-600">By {author.name}</span>
+        <span className="font-semibold text-gray-600">{author.name}</span>
         <span>·</span>
         <span>{post.publishedAt}</span>
         {post.updatedAt && (
           <>
             <span>·</span>
-            <span>Updated {post.updatedAt}</span>
+            <span>{post.updatedAt} 업데이트</span>
           </>
         )}
         <span>·</span>
-        <span>{post.readTime} min read</span>
+        <span>읽는 시간 {post.readTime}분</span>
         {post.tags && post.tags.length > 0 && (
           <>
             <span>·</span>
@@ -188,7 +188,7 @@ export default async function PostPage({ params }: Props) {
           <div className="article-body" dangerouslySetInnerHTML={{ __html: post.content }} />
         ) : (
           <div className="space-y-4 text-gray-700 leading-relaxed">
-            <p>This guide is coming soon. We&apos;re working on a full, detailed breakdown for this topic. Check back shortly — or browse other guides below.</p>
+            <p>이 글은 준비 중입니다. 곧 자세한 내용으로 찾아뵙겠습니다. 아래 다른 글도 함께 살펴보세요.</p>
           </div>
         )}
       </div>
@@ -208,7 +208,7 @@ export default async function PostPage({ params }: Props) {
             className="w-14 h-14 rounded-full shrink-0 flex items-center justify-center text-white font-black text-lg"
             style={{ background: "#cd2e3a" }}
           >
-            {author.name.split(" ").map((w) => w[0]).join("").slice(0, 2)}
+            {author.name.slice(0, 2)}
           </div>
         )}
         <div>
@@ -222,7 +222,7 @@ export default async function PostPage({ params }: Props) {
             className="inline-block text-xs font-semibold mt-2 hover:opacity-80 transition-opacity"
             style={{ color: "#cd2e3a" }}
           >
-            More about SurviveKorea →
+한국에서 살아남기 소개 →
           </Link>
         </div>
       </aside>
@@ -230,7 +230,7 @@ export default async function PostPage({ params }: Props) {
       {/* Related posts */}
       {related.length > 0 && (
         <section className="mt-16 pt-10 border-t border-gray-100">
-          <h2 className="text-xl font-black text-gray-900 mb-6">Related Guides</h2>
+          <h2 className="text-xl font-black text-gray-900 mb-6">함께 보면 좋은 글</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {related.map((rp) => {
               const rCat = getCategoryById(rp.category);
@@ -251,7 +251,7 @@ export default async function PostPage({ params }: Props) {
                   <h3 className="text-sm font-bold text-gray-900 leading-snug line-clamp-2 group-hover:text-red-700 transition-colors">
                     {rp.title}
                   </h3>
-                  <span className="text-xs text-gray-400">{rp.readTime} min read</span>
+                  <span className="text-xs text-gray-400">읽는 시간 {rp.readTime}분</span>
                 </Link>
               );
             })}
@@ -262,7 +262,7 @@ export default async function PostPage({ params }: Props) {
       {/* Back link */}
       <div className="mt-12 text-center">
         <Link href="/" className="inline-flex items-center gap-2 text-sm font-semibold hover:opacity-80 transition-opacity" style={{ color: "#cd2e3a" }}>
-          ← Back to all guides
+← 전체 글 목록으로
         </Link>
       </div>
     </article>

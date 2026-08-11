@@ -6,12 +6,12 @@ export default function CategoryGrid() {
     <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
       <div className="flex items-end justify-between mb-6">
         <div>
-          <p className="text-xs font-bold uppercase tracking-widest text-emerald-500 mb-1">Browse by topic</p>
-          <h2 className="text-2xl font-black text-gray-900">What do you need?</h2>
+          <p className="text-xs font-bold uppercase tracking-widest text-emerald-500 mb-1">주제별 보기</p>
+          <h2 className="text-2xl font-black text-gray-900">어떤 정보가 필요하세요?</h2>
         </div>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
         {categories.map((cat) => (
           <Link
             key={cat.id}

@@ -6,14 +6,14 @@ import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.survivekorea.com"),
   title: {
-    default: "SurviveKorea — Long-Term Living Guide for Foreigners",
-    template: "%s | SurviveKorea",
+    default: "한국에서 살아남기 — 중장년에게 꼭 필요한 정보들",
+    template: "%s | 한국에서 살아남기",
   },
   description:
-    "Real, practical tips for foreigners living long-term in Korea. Housing, visas, banking, health, transport, and everything in between.",
+    "복잡한 정부 정책과 생활 정보를 40·50·60대가 실제로 쓸 수 있게 쉽게 풀어 드립니다. 기초연금·국민연금·건강·스마트폰·재취업까지, 중장년에게 꼭 필요한 정보만 모았습니다.",
   openGraph: {
-    siteName: "SurviveKorea",
-    locale: "en_US",
+    siteName: "한국에서 살아남기",
+    locale: "ko_KR",
     type: "website",
   },
   twitter: {
@@ -27,7 +27,7 @@ const siteSchema = {
     {
       "@type": "Organization",
       "@id": "https://www.survivekorea.com/#organization",
-      name: "SurviveKorea",
+      name: "한국에서 살아남기",
       url: "https://www.survivekorea.com",
       logo: {
         "@type": "ImageObject",
@@ -38,18 +38,18 @@ const siteSchema = {
       "@type": "WebSite",
       "@id": "https://www.survivekorea.com/#website",
       url: "https://www.survivekorea.com",
-      name: "SurviveKorea",
+      name: "한국에서 살아남기",
       description:
-        "Real, practical tips for foreigners living long-term in Korea. Housing, visas, banking, health, transport, and everything in between.",
+        "복잡한 정부 정책과 생활 정보를 40·50·60대가 실제로 쓸 수 있게 쉽게 풀어 드립니다. 기초연금·국민연금·건강·스마트폰·재취업까지, 중장년에게 꼭 필요한 정보만 모았습니다.",
       publisher: { "@id": "https://www.survivekorea.com/#organization" },
-      inLanguage: "en",
+      inLanguage: "ko",
     },
   ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="ko" className="h-full">
       <head>
         <script
           async

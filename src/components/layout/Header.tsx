@@ -24,7 +24,7 @@ export default function Header() {
             </svg>
           </div>
           <span className="text-lg font-black tracking-tight text-gray-900">
-            Survive<span style={{ color: "#cd2e3a" }}>Korea</span>
+            한국에서 <span style={{ color: "#cd2e3a" }}>살아남기</span>
           </span>
         </Link>
 
@@ -48,7 +48,7 @@ export default function Header() {
           <button
             onClick={() => setMenuOpen((v) => !v)}
             className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-            aria-label="Menu"
+            aria-label="메뉴"
           >
             <div className="w-5 flex flex-col gap-1.5">
               <span className={`block h-0.5 bg-gray-700 rounded transition-all ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />

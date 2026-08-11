@@ -1,11 +1,38 @@
 import { ImageResponse } from "next/og";
 
-export const alt =
-  "SurviveKorea — the honest guide to living long-term in Korea";
+export const alt = "한국에서 살아남기 — 중장년에게 꼭 필요한 정보들";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function Image() {
+// Load only the glyphs we actually render, so the font subset stays small.
+async function loadKoreanFont(text: string) {
+  const url = `https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@800&text=${encodeURIComponent(
+    text
+  )}`;
+  const css = await (await fetch(url)).text();
+  const resource = css.match(
+    /src: url\((.+?)\) format\('(?:opentype|truetype)'\)/
+  );
+  if (resource) {
+    const res = await fetch(resource[1]);
+    if (res.status === 200) return res.arrayBuffer();
+  }
+  throw new Error("failed to load font");
+}
+
+export default async function Image() {
+  const brand = "한국에서 살아남기";
+  const headline = "중장년에게 꼭 필요한 정보들";
+  const subtitle = "기초연금 · 국민연금 · 정부지원 · 건강 · 스마트폰 · 재취업";
+  const glyphs = brand + headline + subtitle;
+
+  let fontData: ArrayBuffer | null = null;
+  try {
+    fontData = await loadKoreanFont(glyphs);
+  } catch {
+    fontData = null;
+  }
+
   return new ImageResponse(
     (
       <div
@@ -17,6 +44,7 @@ export default function Image() {
           justifyContent: "center",
           padding: "90px",
           background: "#ffffff",
+          fontFamily: fontData ? "Noto Sans KR" : "sans-serif",
         }}
       >
         {/* Brand row */}
@@ -42,7 +70,7 @@ export default function Image() {
               color: "#111111",
             }}
           >
-            SurviveKorea
+            {brand}
           </div>
         </div>
 
@@ -51,14 +79,14 @@ export default function Image() {
           style={{
             display: "flex",
             marginTop: "44px",
-            fontSize: "70px",
+            fontSize: "72px",
             fontWeight: 800,
             color: "#111111",
-            lineHeight: 1.12,
+            lineHeight: 1.15,
             letterSpacing: "-2px",
           }}
         >
-          The honest guide to living in Korea
+          {headline}
         </div>
 
         {/* Subtitle */}
@@ -66,11 +94,11 @@ export default function Image() {
           style={{
             display: "flex",
             marginTop: "30px",
-            fontSize: "32px",
+            fontSize: "30px",
             color: "#6b7280",
           }}
         >
-          Housing · Visas · Banking · Health · Transport · Daily life
+          {subtitle}
         </div>
 
         {/* Accent bars */}
@@ -95,6 +123,20 @@ export default function Image() {
         </div>
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      ...(fontData
+        ? {
+            fonts: [
+              {
+                name: "Noto Sans KR",
+                data: fontData,
+                weight: 800 as const,
+                style: "normal" as const,
+              },
+            ],
+          }
+        : {}),
+    }
   );
 }

@@ -5,40 +5,38 @@ import { categories } from "@/data/categories";
 import { author } from "@/data/author";
 
 export const metadata: Metadata = {
-  title: "About – SurviveKorea",
+  title: "소개 – 한국에서 살아남기",
   description:
-    "SurviveKorea is a practical, first-hand guide to living long-term in Korea — housing, visas, banking, healthcare, transport, and daily life for foreign residents.",
+    "한국에서 살아남기는 복잡한 정부 정책과 생활 정보를 40·50·60대가 실제로 쓸 수 있게 쉽게 풀어 드리는 중장년 생활·정책 정보 사이트입니다.",
 };
 
 export default function AboutPage() {
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-16">
-      <h1 className="text-3xl font-black text-gray-900 mb-3">About SurviveKorea</h1>
+      <h1 className="text-3xl font-black text-gray-900 mb-3">한국에서 살아남기 소개</h1>
       <p className="text-gray-500 text-sm mb-10">
-        Practical, no-fluff guides for foreigners building a life in Korea.
+        중장년에게 꼭 필요한 정보를, 부모님께 설명하듯 쉽게 풀어 드립니다.
       </p>
 
       <div className="space-y-10 text-gray-600 leading-relaxed text-[15px]">
 
         <section>
-          <h2 className="text-lg font-bold text-gray-900 mb-3">Why this site exists</h2>
+          <h2 className="text-lg font-bold text-gray-900 mb-3">이 사이트를 만든 이유</h2>
           <p className="mb-3">
-            Moving to Korea long-term is exciting — and then you hit the paperwork. Opening a
-            bank account, getting your Alien Registration Card, signing a{" "}
-            <em>jeonse</em> lease, enrolling in National Health Insurance, setting up a phone plan,
-            figuring out the tax office. Every one of these has its own quirks, and almost none of
-            it is explained clearly in English.
+            기초연금은 어떻게 신청하는지, 내 국민연금은 얼마나 나오는지, 무릎이 아플 때 어떤
+            운동을 해야 하는지, 식당 키오스크는 어떻게 쓰는지. 40·50·60대가 되면 마주하는 이런
+            질문들은 하나같이 중요한데, 정작 <strong>쉽고 정확하게 설명해 주는 곳</strong>은 찾기
+            어렵습니다.
           </p>
           <p>
-            Most resources online are either tourist content (&quot;visit Gyeongbokgung!&quot;) or
-            outdated forum threads that contradict each other. SurviveKorea was built to fill that
-            gap: clear, current, step-by-step answers to the questions foreign residents actually
-            ask — written from the inside.
+            정부 홈페이지는 용어가 어렵고, 검색하면 오래됐거나 서로 다른 정보가 뒤섞여 나옵니다.
+            &lsquo;한국에서 살아남기&rsquo;는 바로 그 빈틈을 메우기 위해 만들었습니다. 복잡한 제도와
+            생활 정보를, 실제로 쓸 수 있게 하나하나 짚어 드리는 것이 저희의 목표입니다.
           </p>
         </section>
 
         <section>
-          <h2 className="text-lg font-bold text-gray-900 mb-3">Who&apos;s behind it</h2>
+          <h2 className="text-lg font-bold text-gray-900 mb-3">누가 만드나요</h2>
 
           {/* Author card */}
           <div className="flex items-center gap-4 rounded-2xl border border-gray-100 bg-gray-50 p-5 mb-5">
@@ -55,7 +53,7 @@ export default function AboutPage() {
                 className="w-16 h-16 rounded-full shrink-0 flex items-center justify-center text-white font-black text-xl"
                 style={{ background: "#cd2e3a" }}
               >
-                {author.name.split(" ").map((w) => w[0]).join("").slice(0, 2)}
+                {author.name.slice(0, 2)}
               </div>
             )}
             <div>
@@ -66,33 +64,22 @@ export default function AboutPage() {
           </div>
 
           <p className="mb-3">
-            I&apos;m <strong>Joon Shin</strong> — a Seoul native, 20-plus years in this city. In my
-            late twenties I moved to <strong>New York</strong> for work, and living abroad flipped my
-            perspective: I finally saw my own country through a foreigner&apos;s eyes — which forms to
-            bring, which lines to stand in, what nobody bothers to explain because locals just
-            <em>know</em> it.
-          </p>
-          <p className="mb-3">
-            Now I&apos;m back in Seoul. Between that outside lens and a lifetime of knowing how things
-            actually work here, I kept ending up as the person friends and coworkers from abroad
-            messaged first — which bank will really open an account, what to say at the immigration
-            office, how to read a 전세 lease before signing it. After explaining 알뜰폰 phone plans and
-            HiKorea visa extensions for the hundredth time, I started writing it all down.
+            저희는 복잡한 정책과 생활 정보를 쉽게 풀어 전하는 <strong>편집팀</strong>입니다.
+            부모님 세대가 제도를 몰라 받을 수 있는 혜택을 놓치거나, 새로운 기기 앞에서 당황하는
+            모습을 보며 이 일을 시작했습니다.
           </p>
           <p>
-            That&apos;s the perspective behind every guide here: a local who knows the system, who&apos;s
-            also lived as a foreigner abroad, writing for the person standing in line trying to figure
-            it out. I&apos;m not a lawyer or an immigration agent, so for anything official I&apos;ll always
-            point you to the government source — but I can tell you what the process actually feels
-            like and where people get tripped up.
+            저희는 변호사나 세무사, 의사가 아닙니다. 그래서 공식 절차나 정확한 금액이 필요한
+            부분은 항상 <strong>정부 기관의 공식 자료</strong>를 함께 안내해 드립니다. 대신 저희는
+            &lsquo;그래서 어디서 어떻게 신청하는지&rsquo;, &lsquo;어디서 사람들이 자주 막히는지&rsquo;를
+            실생활 눈높이에서 정리해 드립니다.
           </p>
         </section>
 
         <section>
-          <h2 className="text-lg font-bold text-gray-900 mb-3">What we cover</h2>
+          <h2 className="text-lg font-bold text-gray-900 mb-3">어떤 정보를 다루나요</h2>
           <p className="mb-4">
-            Everything you need to settle in and stay, organized into the categories that matter
-            most for daily life:
+            중장년의 생활에 꼭 필요한 주제를 다섯 가지로 나눠 정리합니다.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {categories.map((cat) => (
@@ -112,61 +99,57 @@ export default function AboutPage() {
         </section>
 
         <section>
-          <h2 className="text-lg font-bold text-gray-900 mb-3">How we keep guides accurate</h2>
+          <h2 className="text-lg font-bold text-gray-900 mb-3">정보를 정확하게 유지하는 방법</h2>
           <p className="mb-3">
-            Rules in Korea change — visa categories get updated, fees rise, government portals get
-            redesigned. We take accuracy seriously:
+            연금 기준액, 지원금 요건, 복지 제도는 매년 바뀝니다. 저희는 정확성을 중요하게
+            생각합니다.
           </p>
           <ul className="list-disc pl-5 space-y-2">
             <li>
-              Every guide is based on <strong>direct, first-hand experience</strong> living and
-              dealing with Korean institutions — not copied from other blogs.
+              각 글은 공식 제도와 자료를 바탕으로 <strong>이해하기 쉽게 다시 정리</strong>합니다.
             </li>
             <li>
-              Where official procedures are involved (immigration, taxes, insurance), we point you
-              to the <strong>official government source</strong> so you can always verify the latest
-              rules.
+              연금·복지·건강처럼 공식 확인이 필요한 부분은 반드시{" "}
+              <strong>정부 기관의 공식 출처</strong>를 함께 안내해 최신 내용을 직접 확인하실 수
+              있게 합니다.
             </li>
             <li>
-              When a reader tells us something has changed, we update the guide. Found something
-              outdated? <Link href="/contact" className="underline" style={{ color: "#cd2e3a" }}>Let us know</Link>.
+              바뀐 정보를 발견하시면 업데이트합니다. 잘못된 내용을 보셨다면{" "}
+              <Link href="/contact" className="underline" style={{ color: "#cd2e3a" }}>알려 주세요</Link>.
             </li>
           </ul>
         </section>
 
         <section>
-          <h2 className="text-lg font-bold text-gray-900 mb-3">Who it&apos;s for</h2>
+          <h2 className="text-lg font-bold text-gray-900 mb-3">누구를 위한 사이트인가요</h2>
           <p>
-            English teachers, exchange students, remote workers, spouses on family visas,
-            engineers on E-7s, digital nomads — anyone living in Korea beyond a short trip. If
-            you&apos;re past the tourist stage and trying to actually build a life here, these guides
-            are for you.
+            은퇴를 앞둔 50대, 노후를 준비하는 60대, 그리고 부모님을 도와드리고 싶은 40대 자녀까지.
+            복잡한 정보 때문에 답답했던 모든 분을 위한 사이트입니다.
           </p>
         </section>
 
         <section>
-          <h2 className="text-lg font-bold text-gray-900 mb-3">A note on honesty</h2>
+          <h2 className="text-lg font-bold text-gray-900 mb-3">솔직하게 말씀드리면</h2>
           <p>
-            SurviveKorea is reader-supported. Some pages display ads, and a few links are
-            affiliate links — if you book or buy through them, we may earn a small commission at no
-            extra cost to you. This never changes what we recommend. We only point to things we&apos;d
-            actually use ourselves. See our{" "}
-            <Link href="/privacy-policy" className="underline" style={{ color: "#cd2e3a" }}>Privacy Policy</Link>{" "}
-            and{" "}
-            <Link href="/disclaimer" className="underline" style={{ color: "#cd2e3a" }}>Disclaimer</Link>{" "}
-            for the full details.
+            한국에서 살아남기는 광고로 운영됩니다. 일부 페이지에 광고가 표시될 수 있습니다.
+            하지만 광고가 저희가 전하는 정보의 내용을 바꾸지는 않습니다. 자세한 내용은{" "}
+            <Link href="/privacy-policy" className="underline" style={{ color: "#cd2e3a" }}>개인정보처리방침</Link>{" "}
+            과{" "}
+            <Link href="/disclaimer" className="underline" style={{ color: "#cd2e3a" }}>면책조항</Link>{" "}
+            에서 확인하실 수 있습니다.
           </p>
         </section>
 
         <section className="rounded-2xl bg-gray-50 border border-gray-100 px-6 py-6">
-          <h2 className="text-base font-bold text-gray-900 mb-2">Get in touch</h2>
+          <h2 className="text-base font-bold text-gray-900 mb-2">문의하기</h2>
           <p className="text-sm">
-            Questions, corrections, or a topic you wish we&apos;d cover? Reach out on the{" "}
-            <Link href="/contact" className="underline" style={{ color: "#cd2e3a" }}>Contact page</Link>{" "}
-            or email{" "}
+            궁금한 점, 잘못된 정보, 다뤄 줬으면 하는 주제가 있으시면{" "}
+            <Link href="/contact" className="underline" style={{ color: "#cd2e3a" }}>문의 페이지</Link>{" "}
+            로 알려 주시거나{" "}
             <a href="mailto:hyeokk763@gmail.com" className="underline" style={{ color: "#cd2e3a" }}>
               hyeokk763@gmail.com
-            </a>. We read every message.
+            </a>{" "}
+            으로 메일 주세요. 모든 메시지를 읽습니다.
           </p>
         </section>
 
