@@ -7,7 +7,7 @@ export const posts: Post[] = [
     slug: "gichoyeongeum-2026-guide",
     excerpt:
       "만 65세가 되면 자동으로 나오는 줄 아는 분들이 많은데, 기초연금은 직접 신청해야 받습니다. 대상 조건부터 감액 기준, 신청 서류까지 부모님께 설명하듯 하나하나 짚어 드립니다.",
-    coverImage: "https://images.unsplash.com/photo-1643134756961-e2f24abc2919?w=800&q=80",
+    coverImage: "https://images.pexels.com/photos/5810689/pexels-photo-5810689.jpeg?auto=compress&cs=tinysrgb&w=800",
     category: "money",
     publishedAt: "2026-07-14",
     updatedAt: "2026-08-05",
@@ -56,7 +56,7 @@ export const posts: Post[] = [
     slug: "gungmin-yeongeum-yesang-suryeongaek",
     excerpt:
       "국민연금을 매달 얼마나 받게 될지, 언제부터 받는 게 유리한지 헷갈리시죠? 예상수령액 확인 방법부터 조기수령과 연기연금의 손익까지 쉽게 풀어 드립니다.",
-    coverImage: "https://images.unsplash.com/photo-1571952924075-5f11bad74738?w=800&q=80",
+    coverImage: "https://images.pexels.com/photos/9821387/pexels-photo-9821387.jpeg?auto=compress&cs=tinysrgb&w=800",
     category: "money",
     publishedAt: "2026-07-22",
     readTime: 8,
@@ -103,7 +103,7 @@ export const posts: Post[] = [
     slug: "jungjangnyeon-mureup-gwanjeol-geongang",
     excerpt:
       "계단 내려갈 때 무릎이 시큰하고, 쪼그려 앉기가 힘들어졌다면 관절이 보내는 신호입니다. 병원 가야 할 때와 집에서 할 수 있는 관절 운동, 생활 습관을 정리했습니다.",
-    coverImage: "https://images.unsplash.com/photo-1764628039015-222c6d30c68d?w=800&q=80",
+    coverImage: "https://images.pexels.com/photos/7298657/pexels-photo-7298657.jpeg?auto=compress&cs=tinysrgb&w=800",
     category: "health",
     publishedAt: "2026-07-30",
     readTime: 7,
@@ -147,7 +147,7 @@ export const posts: Post[] = [
     slug: "smartphone-kiosk-kakaotalk-guide",
     excerpt:
       "식당 키오스크 앞에서 당황하고, 카카오톡 사진 보내는 게 어렵고, 은행 앱이 무섭다면 이 글 하나로 정리하세요. 가장 자주 막히는 것들만 골라 쉽게 설명합니다.",
-    coverImage: "https://images.unsplash.com/photo-1778049368622-a5060ce9903e?w=800&q=80",
+    coverImage: "https://images.pexels.com/photos/6667786/pexels-photo-6667786.jpeg?auto=compress&cs=tinysrgb&w=800",
     category: "digital",
     publishedAt: "2026-08-04",
     readTime: 7,
@@ -198,7 +198,7 @@ export const posts: Post[] = [
     slug: "jeongbu-jiwongeum-bokji-total",
     excerpt:
       "에너지바우처, 문화누리카드, 노인일자리, 긴급복지지원까지 — 신청만 하면 받는데 몰라서 놓치는 혜택이 많습니다. 내가 받을 수 있는 것부터 찾는 법을 알려드립니다.",
-    coverImage: "https://images.unsplash.com/photo-1631651693480-97f1132e333d?w=800&q=80",
+    coverImage: "https://images.pexels.com/photos/8297362/pexels-photo-8297362.jpeg?auto=compress&cs=tinysrgb&w=800",
     category: "welfare",
     publishedAt: "2026-08-07",
     readTime: 8,
@@ -245,7 +245,7 @@ export const posts: Post[] = [
     slug: "gungmin-naeil-baeumcard-jaechwieop",
     excerpt:
       "나라에서 최대 수백만 원의 훈련비를 지원하는 국민내일배움카드. 중장년도 받을 수 있고, 재취업에 유리한 자격증과 기술을 무료에 가깝게 배울 수 있습니다. 신청법과 활용 전략을 정리했습니다.",
-    coverImage: "https://images.unsplash.com/photo-1758612898258-398a43e7fd65?w=800&q=80",
+    coverImage: "https://images.pexels.com/photos/35216547/pexels-photo-35216547.jpeg?auto=compress&cs=tinysrgb&w=800",
     category: "work",
     publishedAt: "2026-08-09",
     readTime: 8,
@@ -293,7 +293,7 @@ export const posts: Post[] = [
     slug: "jutaek-yeongeum-guide",
     excerpt:
       "내 집 한 채는 있는데 매달 쓸 돈이 부족하신가요? 집에 그대로 살면서 매달 연금을 받는 주택연금, 가입 조건과 예상 수령액, 꼭 알아야 할 장단점을 정리했습니다.",
-    coverImage: "https://images.unsplash.com/photo-1571952924075-5f11bad74738?w=800&q=80",
+    coverImage: "https://images.pexels.com/photos/7599735/pexels-photo-7599735.jpeg?auto=compress&cs=tinysrgb&w=800",
     category: "money",
     publishedAt: "2026-06-18",
     readTime: 8,
@@ -342,7 +342,7 @@ export const posts: Post[] = [
     slug: "yeongeumjeochuk-irp-segongje",
     excerpt:
       "연말정산 때 세금 왕창 냈다면, 연금저축과 IRP를 놓치고 있을 가능성이 큽니다. 매년 최대 148만 원까지 돌려받으면서 노후자금도 쌓는 방법을 쉽게 정리했습니다.",
-    coverImage: "https://images.unsplash.com/photo-1643134756961-e2f24abc2919?w=800&q=80",
+    coverImage: "https://images.pexels.com/photos/7054801/pexels-photo-7054801.jpeg?auto=compress&cs=tinysrgb&w=800",
     category: "money",
     publishedAt: "2026-06-25",
     readTime: 7,
@@ -382,7 +382,7 @@ export const posts: Post[] = [
     slug: "janggiyoyang-bohom-guide",
     excerpt:
       "거동이 불편한 부모님을 혼자 돌보느라 지치셨나요? 요양보호사 방문, 요양원 이용 비용의 대부분을 나라가 지원하는 장기요양보험, 등급 신청 방법부터 서비스 종류까지 안내합니다.",
-    coverImage: "https://images.unsplash.com/photo-1631651693480-97f1132e333d?w=800&q=80",
+    coverImage: "https://images.pexels.com/photos/7345476/pexels-photo-7345476.jpeg?auto=compress&cs=tinysrgb&w=800",
     category: "welfare",
     publishedAt: "2026-07-02",
     readTime: 8,
@@ -425,7 +425,7 @@ export const posts: Post[] = [
     slug: "noin-iljari-saeop-guide",
     excerpt:
       "은퇴 후에도 활기차게 일하며 매달 수당을 받는 노인일자리 사업. 공익활동형부터 시장형까지 종류별 특징과 신청 조건, 어디서 신청하는지 쉽게 정리했습니다.",
-    coverImage: "https://images.unsplash.com/photo-1758612898258-398a43e7fd65?w=800&q=80",
+    coverImage: "https://images.pexels.com/photos/6647025/pexels-photo-6647025.jpeg?auto=compress&cs=tinysrgb&w=800",
     category: "welfare",
     publishedAt: "2026-07-09",
     readTime: 7,
@@ -464,7 +464,7 @@ export const posts: Post[] = [
     slug: "gukga-geongang-geomjin-jungjangnyeon",
     excerpt:
       "2년에 한 번 무료로 받는 국가건강검진, 안내문만 받고 그냥 넘기지 않으셨나요? 중장년이 꼭 챙겨야 할 검진 항목과 암검진, 받는 방법을 정리했습니다.",
-    coverImage: "https://images.unsplash.com/photo-1764628039015-222c6d30c68d?w=800&q=80",
+    coverImage: "https://images.pexels.com/photos/8460084/pexels-photo-8460084.jpeg?auto=compress&cs=tinysrgb&w=800",
     category: "health",
     publishedAt: "2026-06-11",
     readTime: 7,
@@ -520,7 +520,7 @@ export const posts: Post[] = [
     slug: "boiseu-pising-seumising-yebang",
     excerpt:
       "자녀를 사칭한 문자, 검찰·은행을 사칭한 전화에 중장년 피해가 특히 큽니다. 대표 수법과 절대 하면 안 되는 행동, 당했을 때 대처법까지 실전 위주로 정리했습니다.",
-    coverImage: "https://images.unsplash.com/photo-1778049368622-a5060ce9903e?w=800&q=80",
+    coverImage: "https://images.pexels.com/photos/7534378/pexels-photo-7534378.jpeg?auto=compress&cs=tinysrgb&w=800",
     category: "digital",
     publishedAt: "2026-07-18",
     readTime: 7,
@@ -564,7 +564,7 @@ export const posts: Post[] = [
     slug: "jungjangnyeon-jaechwieop-junbi",
     excerpt:
       "다시 일하고 싶은데 어디서부터 시작해야 할지 막막하신가요? 중장년 구직에 강한 워크넷 활용법부터 나이 많아도 통하는 이력서·면접 요령까지 실전 중심으로 정리했습니다.",
-    coverImage: "https://images.unsplash.com/photo-1758612898258-398a43e7fd65?w=800&q=80",
+    coverImage: "https://images.pexels.com/photos/5439153/pexels-photo-5439153.jpeg?auto=compress&cs=tinysrgb&w=800",
     category: "work",
     publishedAt: "2026-06-30",
     readTime: 8,
@@ -604,7 +604,7 @@ export const posts: Post[] = [
     slug: "gohyeorap-dangnyo-mansseong-gwalli",
     excerpt:
       "고혈압이나 당뇨 진단을 받으면 겁부터 나지만, 잘 관리하면 평생 큰 문제 없이 지낼 수 있습니다. 약 복용부터 식사·운동, 합병증 예방까지 중장년이 꼭 알아야 할 관리법을 정리했습니다.",
-    coverImage: "https://images.unsplash.com/photo-1764628039015-222c6d30c68d?w=800&q=80",
+    coverImage: "https://images.pexels.com/photos/7108344/pexels-photo-7108344.jpeg?auto=compress&cs=tinysrgb&w=800",
     category: "health",
     publishedAt: "2026-07-06",
     readTime: 8,
