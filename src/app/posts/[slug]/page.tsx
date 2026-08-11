@@ -46,6 +46,20 @@ export default async function PostPage({ params }: Props) {
     .filter((p) => p.category === post.category && p.slug !== post.slug)
     .slice(0, 3);
 
+  // Build a table of contents from the article's <h2> headings and give each
+  // heading an id so the TOC links can jump to it.
+  const toc: { id: string; text: string }[] = [];
+  let headingIndex = 0;
+  const bodyHtml = (post.content ?? "").replace(
+    /<h2>(.*?)<\/h2>/g,
+    (_match, inner: string) => {
+      const id = `section-${headingIndex++}`;
+      const text = inner.replace(/<[^>]+>/g, "").trim();
+      toc.push({ id, text });
+      return `<h2 id="${id}">${inner}</h2>`;
+    }
+  );
+
   const BASE_URL = "https://www.survivekorea.com";
   const articleSchema = {
     "@context": "https://schema.org",
@@ -180,12 +194,39 @@ export default async function PostPage({ params }: Props) {
 
       {/* Article body */}
       <div className="prose prose-gray max-w-none">
-        <p className="text-lg text-gray-600 leading-relaxed font-medium border-l-4 pl-4 mb-8" style={{ borderColor: "#cd2e3a" }}>
+        <p className="text-xl text-gray-600 leading-relaxed font-medium border-l-4 pl-4 mb-8" style={{ borderColor: "#cd2e3a" }}>
           {post.excerpt}
         </p>
 
+        {/* Table of contents */}
+        {toc.length >= 3 && (
+          <nav
+            aria-label="이 글의 순서"
+            className="mb-10 rounded-2xl border border-gray-100 bg-gray-50 p-5 sm:p-6"
+          >
+            <p className="text-sm font-black text-gray-900 mb-3 flex items-center gap-2">
+              <span className="text-base">📑</span> 이 글의 순서
+            </p>
+            <ol className="space-y-2">
+              {toc.map((item, i) => (
+                <li key={item.id} className="flex gap-2.5 text-[15px] leading-snug">
+                  <span className="font-bold shrink-0" style={{ color: "#cd2e3a" }}>
+                    {i + 1}.
+                  </span>
+                  <a
+                    href={`#${item.id}`}
+                    className="text-gray-600 hover:text-gray-900 hover:underline transition-colors"
+                  >
+                    {item.text}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        )}
+
         {post.content ? (
-          <div className="article-body" dangerouslySetInnerHTML={{ __html: post.content }} />
+          <div className="article-body" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
         ) : (
           <div className="space-y-4 text-gray-700 leading-relaxed">
             <p>이 글은 준비 중입니다. 곧 자세한 내용으로 찾아뵙겠습니다. 아래 다른 글도 함께 살펴보세요.</p>

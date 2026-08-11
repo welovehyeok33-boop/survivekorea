@@ -51,36 +51,42 @@ img {
   border-radius: 3px;
 }
 
-/* Article body styles */
+/* Article body styles — sized up for a 40·50·60대 readership */
 .article-body {
   color: #374151;
-  line-height: 1.8;
-  font-size: 1rem;
+  line-height: 1.85;
+  font-size: 1.125rem;
 }
 .article-body h2 {
-  font-size: 1.375rem;
+  font-size: 1.55rem;
   font-weight: 800;
   color: #111111;
-  margin-top: 2.5rem;
-  margin-bottom: 0.75rem;
+  margin-top: 2.75rem;
+  margin-bottom: 0.85rem;
+  line-height: 1.4;
+  scroll-margin-top: 84px; /* keep heading clear of the sticky header on anchor jumps */
 }
 .article-body h3 {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #1f2937;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.45;
 }
 .article-body p {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.4rem;
 }
-.article-body ul {
-  list-style: disc;
+.article-body ul,
+.article-body ol {
   padding-left: 1.5rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.4rem;
 }
+.article-body ul { list-style: disc; }
+.article-body ol { list-style: decimal; }
 .article-body li {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.55rem;
+  line-height: 1.75;
 }
 .article-body strong {
   font-weight: 700;
@@ -127,8 +133,8 @@ img {
   border: 1px solid #f0f0f0;
   border-left: 3px solid #cd2e3a;
   border-radius: 0.5rem;
-  font-size: 0.85rem;
-  line-height: 1.6;
+  font-size: 0.95rem;
+  line-height: 1.7;
   color: #6b7280;
 }
 .article-body .post-sources strong {
