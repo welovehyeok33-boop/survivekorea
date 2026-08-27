@@ -176,7 +176,7 @@ export const posts: Post[] = [
 <h2>스마트폰 기본 — 이거 세 가지</h2>
 <p><strong>글씨·화면 키우기:</strong> 화면이 안 보이면 '설정' → '디스플레이' → '글자 크기와 스타일'에서 키우세요. 이것만 해도 스마트폰이 확 편해집니다.</p>
 <p><strong>와이파이 연결:</strong> 집이나 카페에서 데이터 요금 없이 인터넷을 쓰려면 '설정' → '와이파이'에서 연결하면 됩니다. 비밀번호는 카페 벽이나 영수증에 적혀 있습니다.</p>
-<p><strong>앱 설치:</strong> 새 앱은 '플레이스토어'(안드로이드) 또는 '앱스토어'(아이폰)에서 이름을 검색해 '설치'를 누르면 됩니다. 앞서 소개한 <a href="/posts/gungmin-yeongeum-yesang-suryeongaek">'내 곁에 국민연금'</a> 같은 앱도 이렇게 깝니다.</p>
+<p><strong>앱 설치:</strong> 새 앱은 '플레이스토어'(안드로이드) 또는 '앱스토어'(아이폰)에서 이름을 검색해 '설치'를 누르면 됩니다. 앞서 소개한 <a href="/posts/gungmin-yeongeum-yesang-suryeongaek">'내 곁에 국민연금'</a> 같은 앱도 이렇게 깝니다. 익숙해지면 동사무소에 가지 않고도 <a href="/posts/jeongbu24-online-seoryu-balgeup">정부24로 각종 서류를 집에서</a> 뗄 수 있으니 꼭 익혀 두세요.</p>
 
 <h2>가장 중요한 것 — 스마트폰 사기 조심</h2>
 <p>디지털에서 딱 하나만 조심하라면 <strong>보이스피싱과 문자 사기(스미싱)</strong>입니다. 중장년층이 가장 많이 당하는 게 이겁니다. 다음은 무조건 사기입니다.</p>
@@ -221,7 +221,7 @@ export const posts: Post[] = [
 <p>기초생활수급자와 차상위계층에게 연간 <strong>13만 원 상당</strong>(금액은 매년 조정)을 지원해, 영화·공연·여행·도서·체육시설 등에 쓸 수 있게 해 주는 카드입니다. 삶의 질과 직결되는 혜택인데 의외로 모르는 분이 많습니다. 대상이 되시면 꼭 신청하세요.</p>
 
 <h2>3. 노인일자리 및 사회활동 지원</h2>
-<p>만 65세 이상(일부 60세 이상) 어르신께 일자리와 활동을 연계하고 활동비를 지급하는 제도입니다. 공공시설 관리, 급식 도우미, 경륜 전수 등 다양한 유형이 있고, 매달 일정 활동비를 받습니다. 소일거리도 하고 소득도 얻는 셈이라 인기가 많습니다. 유형과 신청 방법은 <a href="/posts/noin-iljari-saeop-guide">노인일자리 사업</a> 글에 자세히 정리했습니다. 거동이 불편한 어르신이라면 <a href="/posts/janggiyoyang-bohom-guide">노인장기요양보험</a>도 함께 알아보시고, 아직 일할 여력이 있으시다면 <a href="/posts/gungmin-naeil-baeumcard-jaechwieop">국민내일배움카드로 재취업</a>을 준비하는 것도 좋습니다. 만 65세가 되셨다면 지하철 무임승차를 비롯한 <a href="/posts/eoreusin-gyeongno-udae-hyetaek">경로우대·교통 혜택</a>도 빠짐없이 챙기세요.</p>
+<p>만 65세 이상(일부 60세 이상) 어르신께 일자리와 활동을 연계하고 활동비를 지급하는 제도입니다. 공공시설 관리, 급식 도우미, 경륜 전수 등 다양한 유형이 있고, 매달 일정 활동비를 받습니다. 소일거리도 하고 소득도 얻는 셈이라 인기가 많습니다. 유형과 신청 방법은 <a href="/posts/noin-iljari-saeop-guide">노인일자리 사업</a> 글에 자세히 정리했습니다. 거동이 불편한 어르신이라면 <a href="/posts/janggiyoyang-bohom-guide">노인장기요양보험</a>도 함께 알아보시고, 아직 일할 여력이 있으시다면 <a href="/posts/gungmin-naeil-baeumcard-jaechwieop">국민내일배움카드로 재취업</a>을 준비하는 것도 좋습니다. 만 65세가 되셨다면 지하철 무임승차를 비롯한 <a href="/posts/eoreusin-gyeongno-udae-hyetaek">경로우대·교통 혜택</a>도 빠짐없이 챙기세요. 겨울 난방비가 부담이라면 <a href="/posts/energy-baucheo-nanbangbi-jiwon">에너지바우처</a> 신청 자격도 꼭 확인해 보시고요.</p>
 
 <h2>4. 긴급복지지원 (갑작스러운 위기 상황)</h2>
 <p>이건 정말 중요한데 잘 모르는 제도입니다. 갑자기 <strong>실직·질병·사고 등으로 생계가 막막해졌을 때</strong>, 생계비·의료비·주거비 등을 신속하게 지원해 주는 제도입니다. 소득 기준이 맞으면 위기 상황에 한시적으로 도와줍니다. 위급할 때는 <strong>보건복지상담센터 129</strong>에 전화하거나 주민센터에 문의하세요. 이 번호 하나는 꼭 기억해 두세요.</p>
@@ -266,7 +266,7 @@ export const posts: Post[] = [
 <li><strong>카드 발급</strong> — 심사 후 보통 2주 안에 실물 카드가 나옵니다.</li>
 <li><strong>훈련 과정 선택 후 수강</strong> — HRD-Net에서 원하는 과정을 찾아 신청하고, 카드로 결제해 수강합니다.</li>
 </ol>
-<p>온라인이 익숙하지 않으시면 <a href="/posts/smartphone-kiosk-kakaotalk-guide">스마트폰 기본 사용법</a>을 참고하거나, 그냥 고용센터에 직접 가셔서 도움받는 게 마음이 편합니다. 직원들이 친절하게 안내해 줍니다.</p>
+<p>온라인이 익숙하지 않으시면 <a href="/posts/smartphone-kiosk-kakaotalk-guide">스마트폰 기본 사용법</a>을 참고하거나, 그냥 고용센터에 직접 가셔서 도움받는 게 마음이 편합니다. 직원들이 친절하게 안내해 줍니다. 이 카드로 배워 <a href="/posts/jungjangnyeon-gukga-jagyeokjeung">중장년에게 쓸모 있는 국가기술자격증</a>에 도전하면 재취업이 한결 수월해집니다.</p>
 
 <h2>중장년 재취업에 인기 있는 과정</h2>
 <p>어떤 걸 배워야 할지 막막하시다면, 실제 중장년 재취업이 잘 되는 분야를 참고하세요.</p>
@@ -510,7 +510,7 @@ export const posts: Post[] = [
 <p>안내문에 적힌 대상 병·의원(검진기관)에 전화로 예약하고 방문하면 됩니다. 신분증만 챙기면 되고, 위내시경 등은 전날 금식이 필요하니 예약 시 안내를 잘 들으세요. 검진 결과는 보통 2~3주 뒤 우편이나 온라인으로 받습니다. <strong>결과지에서 '유질환 의심'이 나오면 반드시 병원을 찾아 정밀검사를 받으세요.</strong> 검진의 진짜 목적은 여기에 있습니다.</p>
 
 <h2>검진은 시작일 뿐입니다</h2>
-<p>검진에서 고혈압이나 당뇨 같은 수치가 나왔다면, 그때부터가 진짜 관리의 시작입니다. <a href="/posts/gohyeorap-dangnyo-mansseong-gwalli">고혈압·당뇨 같은 만성질환 관리법</a>을 함께 참고하시고, 무릎이나 관절이 예전 같지 않다면 <a href="/posts/jungjangnyeon-mureup-gwanjeol-geongang">관절 건강 관리</a>도 미리 챙기세요. 기억력이 예전 같지 않아 걱정이시라면 <a href="/posts/chimae-yebang-jogi-jindan">치매 예방과 조기 진단</a> 글도 꼭 읽어 보시길 권합니다. 아프고 나서 병원 가는 것보다, 검진으로 미리 아는 것이 몸에도 지갑에도 훨씬 이득입니다.</p>
+<p>검진에서 고혈압이나 당뇨 같은 수치가 나왔다면, 그때부터가 진짜 관리의 시작입니다. <a href="/posts/gohyeorap-dangnyo-mansseong-gwalli">고혈압·당뇨 같은 만성질환 관리법</a>을 함께 참고하시고, 무릎이나 관절이 예전 같지 않다면 <a href="/posts/jungjangnyeon-mureup-gwanjeol-geongang">관절 건강 관리</a>도 미리 챙기세요. 기억력이 예전 같지 않아 걱정이시라면 <a href="/posts/chimae-yebang-jogi-jindan">치매 예방과 조기 진단</a> 글도 꼭 읽어 보시길 권합니다. 검진과 함께 매년 <a href="/posts/doggam-pyeryeom-yebang-jeopjong">독감·폐렴 예방접종</a>까지 챙기면 겨울을 훨씬 건강하게 날 수 있습니다. 아프고 나서 병원 가는 것보다, 검진으로 미리 아는 것이 몸에도 지갑에도 훨씬 이득입니다.</p>
 
 <div class="post-sources"><p><strong>내 검진 대상 여부와 기관은 아래에서 확인하세요.</strong></p><ul><li>국민건강보험공단 <a href="https://www.nhis.or.kr" target="_blank" rel="noopener noreferrer">nhis.or.kr</a> · 상담 1577-1000</li></ul><p>검진 항목·주기는 연령과 건강 상태에 따라 다릅니다. 정확한 안내는 공단과 검진기관에서 확인하시기 바랍니다.</p></div>`,
   },
@@ -631,7 +631,7 @@ export const posts: Post[] = [
 <p>한 번에 다 바꾸려 하지 말고, 국물 남기기 하나부터 시작하세요.</p>
 
 <h2>운동은 매일 조금씩</h2>
-<p>가장 좋은 운동은 <strong>빠르게 걷기</strong>입니다. 하루 30분, 숨이 약간 찰 정도로 걸으면 혈압과 혈당 관리에 큰 도움이 됩니다. 다만 무릎이 아프신 분은 무리하면 안 됩니다. <a href="/posts/jungjangnyeon-mureup-gwanjeol-geongang">무릎·관절이 아플 때의 운동법</a>을 참고해 관절에 부담이 적은 방식으로 꾸준히 하세요. 운동은 '많이 한 번'보다 '조금씩 매일'이 훨씬 낫습니다.</p>
+<p>가장 좋은 운동은 <strong>빠르게 걷기</strong>입니다. 하루 30분, 숨이 약간 찰 정도로 걸으면 혈압과 혈당 관리에 큰 도움이 됩니다. 다만 무릎이 아프신 분은 무리하면 안 됩니다. <a href="/posts/jungjangnyeon-mureup-gwanjeol-geongang">무릎·관절이 아플 때의 운동법</a>을 참고해 관절에 부담이 적은 방식으로 꾸준히 하세요. 운동은 '많이 한 번'보다 '조금씩 매일'이 훨씬 낫습니다. 만성질환은 병원비도 오래 드는 만큼, <a href="/posts/silson-bohom-uiryobi-daebi">실손보험으로 의료비를 대비</a>해 두는 것도 잊지 마세요.</p>
 
 <h2>정기 검진으로 합병증을 미리 막으세요</h2>
 <p>만성질환이 있으면 정기적으로 <strong>눈(안저검사), 콩팥, 발</strong> 상태를 함께 점검해야 합니다. 합병증은 초기에 잡으면 충분히 관리됩니다. <a href="/posts/gukga-geongang-geomjin-jungjangnyeon">국가건강검진</a>을 빠짐없이 받고, 이상 소견이 나오면 미루지 말고 병원을 찾으세요. 고혈압·당뇨는 '이기는 병'이 아니라 '함께 잘 지내는 병'입니다. 겁내기보다 꾸준함으로 다스리면, 건강하게 오래 사실 수 있습니다.</p>
@@ -909,6 +909,197 @@ export const posts: Post[] = [
 <p>불면증은 '잘 자야 한다'는 조급함이 오히려 잠을 쫓는 경우가 많습니다. 오늘 하루 못 잤다고 큰일 나지 않습니다. 마음을 편히 갖고, 위의 습관을 하나씩 지켜 보세요. 잠의 질은 분명히 좋아집니다.</p>
 
 <div class="post-sources"><p><strong>정확한 진단은 전문의와 상의하세요.</strong></p><ul><li>질병관리청 국가건강정보포털 <a href="https://health.kdca.go.kr" target="_blank" rel="noopener noreferrer">health.kdca.go.kr</a></li><li>대한수면의학회 자료</li></ul><p>이 글은 일반적인 건강 정보이며 의학적 진단·처방을 대신하지 않습니다. 수면제 복용은 반드시 의사와 상의하시기 바랍니다.</p></div>`,
+  },
+  {
+    id: "21",
+    title: "겨울 난방비 부담 던다 — 에너지바우처, 놓치면 손해입니다",
+    slug: "energy-baucheo-nanbangbi-jiwon",
+    excerpt:
+      "겨울철 난방비 걱정되시나요? 저소득·취약계층에 냉난방비를 지원하는 에너지바우처와 등유·연탄 지원까지, 신청 자격과 방법을 쉽게 정리했습니다.",
+    coverImage: "https://images.pexels.com/photos/9307960/pexels-photo-9307960.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "welfare",
+    publishedAt: "2026-08-13",
+    updatedAt: "2026-08-13",
+    readTime: 6,
+    featured: false,
+    tags: ["에너지바우처", "난방비", "정부지원", "복지"],
+    content: `<p>날이 쌀쌀해지면 가장 먼저 걱정되는 게 난방비입니다. 특히 형편이 넉넉지 않은 어르신 가구라면 '보일러 켜기가 무섭다'는 말이 절로 나오죠. 하지만 조건에 맞으면 나라에서 냉난방비를 지원해 주는 <strong>에너지바우처</strong> 제도가 있습니다. 알고도 안 챙기면 고스란히 손해입니다. 오늘은 자격과 신청 방법을 쉽게 풀어 드리겠습니다.</p>
+
+<h2>에너지바우처가 뭔가요?</h2>
+<p>에너지바우처는 <strong>전기·도시가스·지역난방·등유·연탄·LPG</strong> 같은 에너지 비용을 정부가 대신 내주는 이용권입니다. 여름 냉방비와 겨울 난방비 모두에 쓸 수 있고, 가구원 수와 계절에 따라 지원 금액이 정해집니다. 현금이 아니라 요금에서 자동 차감되거나 카드처럼 쓰는 방식이라 관리도 어렵지 않습니다.</p>
+
+<h2>누가 받을 수 있나요?</h2>
+<p>크게 <strong>소득 기준</strong>과 <strong>세대 특성 기준</strong> 두 가지를 모두 충족해야 합니다.</p>
+<ul>
+<li><strong>소득:</strong> 국민기초생활보장 생계·의료·주거·교육급여 수급자</li>
+<li><strong>세대 특성:</strong> 노인(만 65세 이상), 영유아, 장애인, 임산부, 중증·희귀질환자, 한부모·소년소녀가정 등이 포함된 가구</li>
+</ul>
+<p>즉 '기초생활수급자이면서 어르신이 계신 가구'라면 해당될 가능성이 높습니다. 본인이 대상인지 헷갈린다면 주민센터에 전화 한 통이면 확인됩니다.</p>
+
+<h2>어떻게 신청하나요?</h2>
+<p>신청은 어렵지 않습니다.</p>
+<ul>
+<li><strong>방문 신청:</strong> 주민등록상 주소지 <strong>읍·면·동 주민센터</strong>에 신분증을 들고 방문</li>
+<li><strong>온라인 신청:</strong> '복지로' 누리집에서도 가능</li>
+<li><strong>대리 신청:</strong> 거동이 불편하면 가족이나 이웃이 대신 신청할 수 있습니다</li>
+</ul>
+<p>보통 봄~겨울 사이 신청 기간이 정해져 있으니, 늦지 않게 챙기세요. 겨울 난방용은 특히 신청이 몰리므로 미리 알아두는 게 좋습니다.</p>
+
+<h2>이런 지원도 함께 챙기세요</h2>
+<p>에너지바우처 외에도 <strong>등유나눔카드, 연탄쿠폰, 도시가스·전기요금 복지할인</strong> 등 겹쳐서 받을 수 있는 지원이 많습니다. 정부의 여러 복지 혜택은 <a href="/posts/jeongbu-jiwongeum-bokji-total">정부지원금·복지 총정리</a> 글에 모아 두었으니 함께 확인해 보세요. 만 65세 이상이시라면 <a href="/posts/eoreusin-gyeongno-udae-hyetaek">경로우대·교통 혜택</a>도 빠짐없이 신청하시고요.</p>
+
+<div class="post-sources"><p><strong>신청과 자세한 기준은 아래에서 확인하세요.</strong></p><ul><li>복지로 <a href="https://www.bokjiro.go.kr" target="_blank" rel="noopener noreferrer">bokjiro.go.kr</a> · 한국에너지공단 에너지바우처 <a href="https://www.energyv.or.kr" target="_blank" rel="noopener noreferrer">energyv.or.kr</a></li><li>보건복지상담센터 129</li></ul><p>지원 금액과 신청 기간은 매년 달라질 수 있으니 신청 전 최신 공고를 확인하시기 바랍니다.</p></div>`,
+  },
+  {
+    id: "22",
+    title: "독감·폐렴 예방접종, 무료 대상이신가요? 어르신 필수 접종 정리",
+    slug: "doggam-pyeryeom-yebang-jeopjong",
+    excerpt:
+      "찬 바람 불기 전 꼭 챙겨야 할 어르신 예방접종. 국가가 무료로 지원하는 독감·폐렴구균 접종 대상과 시기, 접종받는 곳을 알기 쉽게 정리했습니다.",
+    coverImage: "https://images.pexels.com/photos/5207018/pexels-photo-5207018.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "health",
+    publishedAt: "2026-08-16",
+    updatedAt: "2026-08-16",
+    readTime: 6,
+    featured: false,
+    tags: ["예방접종", "독감", "폐렴구균", "어르신건강"],
+    content: `<p>찬 바람이 불기 시작하면 어르신 건강에 가장 위험한 것이 바로 <strong>독감과 폐렴</strong>입니다. 젊을 때는 며칠 앓고 지나가지만, 나이가 들면 폐렴으로 번져 입원까지 가는 일이 흔합니다. 다행히 나라에서 어르신 예방접종을 무료로 지원합니다. 오늘은 무엇을, 언제, 어디서 맞아야 하는지 정리해 드리겠습니다.</p>
+
+<h2>왜 어르신에게 특히 중요한가요?</h2>
+<p>나이가 들면 면역력이 떨어져 같은 바이러스에도 훨씬 크게 앓습니다. 특히 독감을 앓다가 <strong>폐렴</strong>으로 이어지면 위험해질 수 있습니다. <a href="/posts/gohyeorap-dangnyo-mansseong-gwalli">고혈압·당뇨</a> 같은 만성질환이 있는 분은 더욱 조심해야 합니다. 예방접종은 이런 합병증을 막아주는 가장 확실하고 저렴한 방법입니다.</p>
+
+<h2>독감(인플루엔자) 예방접종</h2>
+<p><strong>만 65세 이상</strong> 어르신은 매년 무료로 독감 예방접종을 받을 수 있습니다.</p>
+<ul>
+<li><strong>시기:</strong> 보통 매년 <strong>9~10월경 시작</strong>해 겨울 내내 가능합니다. 유행 전에 미리 맞는 게 좋습니다.</li>
+<li><strong>주기:</strong> 독감 바이러스는 매년 바뀌므로 <strong>해마다 한 번씩</strong> 맞아야 합니다.</li>
+</ul>
+
+<h2>폐렴구균 예방접종</h2>
+<p><strong>만 65세 이상</strong>이면서 아직 폐렴구균 백신을 맞지 않았다면 <strong>무료로 1회</strong> 접종받을 수 있습니다. 독감과 달리 매년 맞을 필요는 없고, 보건소에서 지원하는 백신은 평생 1회가 기본입니다. 독감 주사와 같은 날 양팔에 각각 맞아도 괜찮으니, 병원에서 한 번에 상담받으세요.</p>
+
+<h2>어디서 맞나요?</h2>
+<ul>
+<li><strong>가까운 보건소</strong> 또는 <strong>지정 위탁 병·의원</strong>(동네 내과 등)</li>
+<li>신분증만 있으면 되고, 대부분 예약 없이도 가능하지만 미리 전화해 확인하면 헛걸음을 줄일 수 있습니다</li>
+</ul>
+<p>어느 병원이 무료 접종 지정 기관인지는 '예방접종도우미' 누리집이나 보건소 전화로 확인할 수 있습니다.</p>
+
+<h2>접종 전후 이것만 지키세요</h2>
+<p>몸 상태가 좋은 날 맞고, 접종 후에는 20~30분 정도 병원에서 이상반응이 없는지 지켜본 뒤 귀가하세요. 접종 당일은 무리한 활동과 음주를 피하고 충분히 쉬면 됩니다. 예방접종만 잘 챙겨도 겨울을 한결 건강하게 날 수 있습니다. 접종과 함께 <a href="/posts/gukga-geongang-geomjin-jungjangnyeon">국가건강검진</a>도 그해 대상이라면 같이 챙기시길 권합니다.</p>
+
+<div class="post-sources"><p><strong>접종 기관과 일정은 아래에서 확인하세요.</strong></p><ul><li>질병관리청 예방접종도우미 <a href="https://nip.kdca.go.kr" target="_blank" rel="noopener noreferrer">nip.kdca.go.kr</a></li><li>보건복지상담센터 129 · 가까운 보건소</li></ul><p>지원 대상과 시기는 매년 달라질 수 있으니 접종 전 최신 공고를 확인하시기 바랍니다.</p></div>`,
+  },
+  {
+    id: "23",
+    title: "동사무소 안 가도 된다 — 정부24로 집에서 서류 떼는 법",
+    slug: "jeongbu24-online-seoryu-balgeup",
+    excerpt:
+      "주민등록등본 한 장 떼러 동사무소 가지 마세요. 정부24에서 집에서 무료로 각종 증명서를 발급받는 방법을, 처음 쓰는 분도 따라 할 수 있게 정리했습니다.",
+    coverImage: "https://images.pexels.com/photos/6929024/pexels-photo-6929024.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "digital",
+    publishedAt: "2026-08-20",
+    updatedAt: "2026-08-20",
+    readTime: 6,
+    featured: false,
+    tags: ["정부24", "온라인민원", "서류발급", "디지털"],
+    content: `<p>주민등록등본 한 장 떼자고 동사무소까지 다녀오신 적 있으시죠? 번호표 뽑고 기다리고, 수수료까지 냈던 그 일을 이제 <strong>집에서 컴퓨터나 스마트폰으로 무료</strong>로 할 수 있습니다. 바로 <strong>정부24</strong>입니다. 처음이라 어렵게 느껴지실 수 있는데, 한 번만 해보면 정말 쉽습니다. 차근차근 알려 드리겠습니다.</p>
+
+<h2>정부24로 뭘 할 수 있나요?</h2>
+<p>정부24는 정부의 각종 민원 서류를 발급·신청하는 곳입니다. 대표적으로 이런 서류를 집에서 뗄 수 있습니다.</p>
+<ul>
+<li><strong>주민등록등본·초본</strong> (온라인 발급은 대부분 무료)</li>
+<li><strong>가족관계증명서, 건강보험 자격확인서</strong></li>
+<li><strong>지방세 납세증명, 토지대장</strong> 등</li>
+</ul>
+<p>은행이나 관공서에 낼 서류 대부분을 여기서 해결할 수 있습니다.</p>
+
+<h2>먼저 준비할 것</h2>
+<p>본인 확인 수단 하나만 있으면 됩니다. <strong>공동인증서(옛 공인인증서), 간편인증(카카오·네이버·통신사 PASS)</strong> 중 하나면 충분합니다. 요즘은 카카오나 PASS로 하는 <strong>간편인증</strong>이 가장 쉽습니다. 스마트폰 인증 사용법이 낯설다면 <a href="/posts/mobile-banking-ganpyeon-gyeolje">모바일뱅킹·간편결제</a> 글에서 간편인증 설정법을 함께 보시면 도움이 됩니다.</p>
+
+<h2>서류 발급, 이렇게 하세요</h2>
+<ol>
+<li>인터넷 주소창에 <strong>정부24(gov.kr)</strong> 입력, 또는 스마트폰에 '<strong>정부24</strong>' 앱 설치</li>
+<li>필요한 서류 이름(예: '주민등록등본')을 검색</li>
+<li>'발급하기' 누르고 <strong>간편인증</strong>으로 본인 확인</li>
+<li>주소 등 정보를 확인한 뒤 <strong>화면에서 열람하거나 집 프린터로 출력</strong></li>
+</ol>
+<p>프린터가 없어도 화면으로 확인하거나, 필요하면 무인민원발급기·주민센터에서 받을 수 있으니 걱정 마세요.</p>
+
+<h2>어르신이 특히 조심할 점</h2>
+<p>정부24를 사칭한 <strong>가짜 문자와 인터넷 주소</strong>가 많습니다. 문자로 온 링크를 함부로 누르지 말고, 반드시 주소창에 직접 <strong>gov.kr</strong>을 입력하거나 공식 앱으로만 접속하세요. 이런 수법에 당하지 않으려면 <a href="/posts/boiseu-pising-seumising-yebang">보이스피싱·스미싱 예방</a> 글도 꼭 읽어 두시길 권합니다. 키오스크나 스마트폰 기본기가 아직 낯설다면 <a href="/posts/smartphone-kiosk-kakaotalk-guide">스마트폰·키오스크 사용법</a>부터 익히면 훨씬 수월합니다.</p>
+
+<div class="post-sources"><p><strong>공식 누리집은 아래 하나뿐입니다.</strong></p><ul><li>정부24 <a href="https://www.gov.kr" target="_blank" rel="noopener noreferrer">gov.kr</a></li><li>정부24 상담센터 1588-2188</li></ul><p>정부24는 수수료를 문자로 요구하지 않습니다. 링크가 포함된 안내 문자는 사기를 의심하세요.</p></div>`,
+  },
+  {
+    id: "24",
+    title: "실손보험, 그냥 두면 손해 — 중장년 의료비 대비 이렇게 점검하세요",
+    slug: "silson-bohom-uiryobi-daebi",
+    excerpt:
+      "나이 들수록 늘어나는 병원비, 실손보험 하나로 든든해집니다. 중장년이 꼭 알아야 할 실손보험의 구조와 내 보험 점검법, 과도한 보험 정리 요령을 정리했습니다.",
+    coverImage: "https://images.pexels.com/photos/6289038/pexels-photo-6289038.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "money",
+    publishedAt: "2026-08-23",
+    updatedAt: "2026-08-23",
+    readTime: 7,
+    featured: false,
+    tags: ["실손보험", "의료비", "보험점검", "노후준비"],
+    content: `<p>나이가 들수록 병원 갈 일은 늘어납니다. 그때 병원비 부담을 크게 덜어주는 게 바로 <strong>실손의료보험</strong>, 흔히 '실비보험'이라 부르는 것입니다. 그런데 정작 내가 어떤 보험에 들어 있는지, 보장이 되는지 모르고 매달 보험료만 내는 분이 많습니다. 오늘은 중장년이 꼭 챙겨야 할 실손보험 점검법을 정리해 드리겠습니다.</p>
+
+<h2>실손보험이 뭔가요?</h2>
+<p>실손보험은 <strong>병원에서 실제로 쓴 치료비의 일부를 돌려받는</strong> 보험입니다. 국민건강보험이 안 되는 부분(비급여)이나 본인부담금을 보장해 줍니다. 큰 병으로 입원하거나 수술할 때 수백만 원의 병원비를 크게 줄여주므로, '제2의 건강보험'이라 불립니다. 노후에 가장 든든한 안전판 중 하나입니다.</p>
+
+<h2>내 실손보험부터 확인하세요</h2>
+<p>가장 먼저 할 일은 <strong>내가 가입한 보험이 뭔지 파악하는 것</strong>입니다.</p>
+<ul>
+<li><strong>'내보험 찾아줌'</strong> 서비스에서 내가 든 모든 보험을 한눈에 조회할 수 있습니다</li>
+<li>실손보험은 가입 시기에 따라 보장·자기부담금이 다릅니다. 오래된 보험일수록 보장이 넓은 경우가 많으니 <strong>함부로 해지하지 마세요</strong></li>
+<li>중복 가입은 소용없습니다. 실손은 여러 개 들어도 실제 쓴 만큼만 나눠서 받습니다</li>
+</ul>
+
+<h2>과한 보험은 정리, 빈 곳은 보완</h2>
+<p>은퇴가 가까울수록 <strong>매달 나가는 보험료를 감당할 수 있는지</strong>가 중요합니다. 소득이 줄어드는 시기라 보험료가 부담되면 노후가 흔들립니다. 겹치는 보장이나 필요 없는 특약은 정리하고, 정작 중요한 실손과 <strong>암·뇌·심장</strong> 같은 큰 병 대비는 남기는 식으로 균형을 맞추세요. 판단이 어렵다면 보험사 상담사보다 중립적인 <strong>보험 비교 공적 창구</strong>를 활용하는 게 좋습니다.</p>
+
+<h2>보험만으로 부족한 부분은</h2>
+<p>실손보험이 병원비를 덮어준다면, 오래 앓거나 간병이 필요할 때의 부담은 <a href="/posts/janggiyoyang-bohom-guide">노인장기요양보험</a>이 도와줍니다. 두 가지를 함께 알아두면 노후 의료·간병 대비가 한결 든든합니다. 또 평소 <a href="/posts/gukga-geongang-geomjin-jungjangnyeon">국가건강검진</a>으로 병을 미리 찾는 것이 결국 가장 큰 의료비 절약입니다. 재산을 자녀에게 물려줄 계획이라면 <a href="/posts/sangsok-jeungyeo-segeum-gicho">상속·증여세</a>도 함께 살펴보세요.</p>
+
+<div class="post-sources"><p><strong>내 보험 조회와 상담은 아래에서.</strong></p><ul><li>내보험 찾아줌 <a href="https://cont.insure.or.kr" target="_blank" rel="noopener noreferrer">cont.insure.or.kr</a> · 금융감독원 <a href="https://www.fss.or.kr" target="_blank" rel="noopener noreferrer">fss.or.kr</a></li><li>금융감독원 상담 1332</li></ul><p>보험 가입·해지는 신중히 결정해야 합니다. 이 글은 일반 정보이며, 개인 상황에 맞는 판단은 전문가와 상의하시기 바랍니다.</p></div>`,
+  },
+  {
+    id: "25",
+    title: "나이 들어도 늦지 않다 — 중장년에게 쓸모 있는 국가기술자격증",
+    slug: "jungjangnyeon-gukga-jagyeokjeung",
+    excerpt:
+      "재취업과 부업에 실제로 도움 되는 중장년 인기 자격증을 정리했습니다. 지게차·전기기능사·요양보호사·조리기능사까지, 나이와 상관없이 도전할 수 있습니다.",
+    coverImage: "https://images.pexels.com/photos/9829307/pexels-photo-9829307.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "work",
+    publishedAt: "2026-08-26",
+    updatedAt: "2026-08-26",
+    readTime: 7,
+    featured: false,
+    tags: ["자격증", "국가기술자격", "재취업", "중장년"],
+    content: `<p>"이 나이에 무슨 자격증이냐" 하시는 분 많습니다. 하지만 중장년의 재취업 시장에서 자격증은 여전히 강력한 무기입니다. 나이보다 '할 수 있는 일'을 증명하는 종이 한 장이 면접에서 큰 차이를 만듭니다. 오늘은 중장년이 실제로 도전해 볼 만한, 취업으로 이어지는 자격증을 정리해 드리겠습니다.</p>
+
+<h2>취업이 잘 되는 실용 자격증</h2>
+<p>중요한 건 '따기 쉬운' 자격증이 아니라 <strong>일자리로 이어지는</strong> 자격증입니다.</p>
+<ul>
+<li><strong>지게차운전기능사:</strong> 물류·창고·공장 수요가 꾸준합니다. 필기 부담이 적어 중장년에게 인기가 많습니다</li>
+<li><strong>전기기능사:</strong> 자격과 경력을 쌓으면 안정적인 기술직으로 오래 일할 수 있습니다</li>
+<li><strong>요양보호사:</strong> 고령화로 수요가 계속 늘고 있어 여성·남성 모두 재취업이 잘 됩니다</li>
+<li><strong>한식조리기능사:</strong> 급식소·식당 취업이나 작은 창업에 활용됩니다</li>
+<li><strong>건축도장·방수 등 기능계:</strong> 현장 경력이 있으면 자격 취득 후 단가가 올라갑니다</li>
+</ul>
+
+<h2>비용은 나라가 도와줍니다</h2>
+<p>자격증 공부에 돈이 많이 들 것 같아 망설이지 마세요. <a href="/posts/gungmin-naeil-baeumcard-jaechwieop">국민내일배움카드</a>를 발급받으면 수강료의 대부분을 정부가 지원해 줘, 적은 자기 부담으로 학원을 다닐 수 있습니다. 요양보호사처럼 별도 교육기관에서 배우는 자격도 지원 대상인 경우가 많으니 꼭 확인하세요.</p>
+
+<h2>나에게 맞는 자격 고르는 법</h2>
+<p>남들이 딴다고 무작정 따라가지 마세요. <strong>내 체력, 예전 경력, 살고 있는 지역의 일자리</strong>를 함께 봐야 합니다. 예를 들어 몸 쓰는 일이 부담되면 요양보호사·조리 쪽이, 손기술과 현장 경험이 있다면 전기·기능계가 잘 맞습니다. 자격증을 딴 뒤의 구체적인 취업 전략은 <a href="/posts/jungjangnyeon-jaechwieop-junbi">중장년 재취업 준비</a> 글을 참고하세요.</p>
+
+<h2>작게 시작해도 괜찮습니다</h2>
+<p>꼭 전업이 아니어도 됩니다. 자격증을 활용해 틈틈이 일하는 <a href="/posts/jungjangnyeon-bueop-guide">부업·소일거리</a>로 시작해, 몸에 맞으면 점차 늘려가는 방법도 좋습니다. 중요한 건 '늦었다'는 생각을 접고 오늘 원서 접수부터 알아보는 것입니다. 시작하면 길이 보입니다.</p>
+
+<div class="post-sources"><p><strong>시험 일정과 접수는 아래에서.</strong></p><ul><li>한국산업인력공단 큐넷 <a href="https://www.q-net.or.kr" target="_blank" rel="noopener noreferrer">q-net.or.kr</a> · 직업훈련포털 HRD-Net <a href="https://www.hrd.go.kr" target="_blank" rel="noopener noreferrer">hrd.go.kr</a></li></ul><p>자격 종목별 응시 자격과 일정은 매년 달라질 수 있으니 접수 전 큐넷 공고를 확인하시기 바랍니다.</p></div>`,
   },
 ];
 
