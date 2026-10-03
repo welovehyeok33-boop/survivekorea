@@ -182,7 +182,7 @@ export default async function PostPage({ params }: Props) {
       </div>
 
       <details className="mb-8 print:hidden">
-        <summary className="text-sm text-slate-600 cursor-pointer">관련 이미지 보기 (내용 이해를 돕는 자료 사진)</summary>
+        <summary className="text-sm text-slate-600 cursor-pointer">{post.coverImage.endsWith(".svg") ? "글의 핵심 안내 이미지 보기" : "관련 이미지 보기 (내용 이해를 돕는 자료 사진)"}</summary>
       <div className="relative rounded-2xl overflow-hidden mt-3" style={{ aspectRatio: "16/9" }}>
         <Image
           src={post.coverImage}

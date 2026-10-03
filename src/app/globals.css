@@ -172,6 +172,17 @@ img {
 
 .reading-large .article-body { font-size: 1.35rem; line-height: 1.95; }
 .article-body .post-sources h2 { margin-top: 0; font-size: 1.1rem; }
+.article-body .reading-note {
+  margin: 1.75rem 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #dbe3ed;
+  border-left: 4px solid #1b4fa0;
+  border-radius: 0.75rem;
+  background: #f5f8fc;
+}
+.article-body .reading-note h3 { margin-top: 0; font-size: 1.1rem; }
+.article-body .reading-note p:last-child,
+.article-body .reading-note ul:last-child { margin-bottom: 0; }
 :focus-visible { outline: 3px solid #1b4fa0; outline-offset: 4px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media print {
