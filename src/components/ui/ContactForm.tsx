@@ -63,30 +63,33 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">이름</label>
+        <label htmlFor="contact-name" className="block text-sm font-medium text-gray-700 mb-1">이름</label>
         <input
           type="text"
           name="name"
+          id="contact-name"
           required
           placeholder="성함을 입력하세요"
           className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition-all"
         />
       </div>
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">
+        <label htmlFor="contact-email" className="block text-sm font-medium text-gray-700 mb-1">
           이메일 <span className="text-gray-400 font-normal">(선택)</span>
         </label>
         <input
           type="email"
           name="email"
+          id="contact-email"
           placeholder="your@email.com"
           className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition-all"
         />
       </div>
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">문의 유형</label>
+        <label htmlFor="contact-subject" className="block text-sm font-medium text-gray-700 mb-1">문의 유형</label>
         <select
           name="subject"
+          id="contact-subject"
           className="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition-all bg-white"
         >
           <option value="question">정보 관련 질문</option>
@@ -96,9 +99,10 @@ export default function ContactForm() {
         </select>
       </div>
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">내용</label>
+        <label htmlFor="contact-message" className="block text-sm font-medium text-gray-700 mb-1">내용</label>
         <textarea
           name="message"
+          id="contact-message"
           required
           rows={5}
           placeholder="어떤 내용인가요?"
@@ -111,7 +115,7 @@ export default function ContactForm() {
         className="w-full text-white px-6 py-3 rounded-xl text-sm font-bold hover:opacity-90 transition-all"
         style={{ background: "#cd2e3a" }}
       >
-        메시지 보내기 →
+        메일 앱에서 보내기 →
       </button>
 
       <p className="text-xs text-gray-400 text-center">

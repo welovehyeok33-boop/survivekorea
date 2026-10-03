@@ -49,6 +49,8 @@ export default function Header() {
             onClick={() => setMenuOpen((v) => !v)}
             className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
             aria-label="메뉴"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
           >
             <div className="w-5 flex flex-col gap-1.5">
               <span className={`block h-0.5 bg-gray-700 rounded transition-all ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
@@ -61,7 +63,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="lg:hidden border-t border-gray-100 bg-white px-4 py-4 grid grid-cols-2 gap-2">
+        <div id="mobile-menu" className="lg:hidden border-t border-gray-100 bg-white px-4 py-4 grid grid-cols-2 gap-2">
           {categories.map((cat) => (
             <Link
               key={cat.id}

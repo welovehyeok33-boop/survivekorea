@@ -1,51 +1,20 @@
 import type { Metadata } from "next";
-import ArticleCard from "@/components/ui/ArticleCard";
+import Link from "next/link";
 import PostGrid from "@/components/sections/PostGrid";
-import DailyNews from "@/components/sections/DailyNews";
-import { getFeaturedPost } from "@/data/posts";
-
-export const metadata: Metadata = {
-  title: "한국에서 살아남기 — 중장년에게 꼭 필요한 정보들",
-  description:
-    "기초연금·국민연금·정부지원금·건강·스마트폰·재취업까지, 40·50·60대가 실제로 쓸 수 있는 생활·정책 정보를 쉽게 풀어 드립니다.",
-  alternates: { canonical: "/" },
-  openGraph: {
-    title: "한국에서 살아남기 — 중장년에게 꼭 필요한 정보들",
-    description:
-      "기초연금·국민연금·정부지원금·건강·스마트폰·재취업까지, 40·50·60대가 실제로 쓸 수 있는 생활·정책 정보를 쉽게 풀어 드립니다.",
-    url: "/",
-    type: "website",
-  },
-};
-
-export default function Home() {
-  const featured = getFeaturedPost();
-
-  return (
-    <>
-      {/* SEO/accessibility heading — the visible brand lives in the header */}
-      <h1 className="sr-only">
-        한국에서 살아남기 — 중장년에게 꼭 필요한 정보들
-      </h1>
-
-      {/* ── Daily-news ticker ── */}
-      <DailyNews />
-
-      {/* ── Featured article — straight into the content, no hero ── */}
-      {featured && (
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-8 md:pt-10">
-          <div className="mb-5">
-            <p className="text-xs font-bold uppercase tracking-widest mb-1" style={{ color: "#c8102e" }}>편집팀 추천</p>
-            <h2 className="text-2xl font-black text-gray-900">이번 주 핵심 정보</h2>
-          </div>
-          <ArticleCard post={featured} size="large" />
-        </section>
-      )}
-
-      {/* ── Post grid ── */}
-      <div id="guides">
-        <PostGrid />
-      </div>
-    </>
-  );
+import { posts } from "@/data/posts";
+export const metadata:Metadata={title:"한국에서 살아남기 — 중장년 생활·정책 길잡이",description:"연금·지원금·돌봄·건강·스마트폰·재취업. 조건을 확인하고 다음 행동을 준비하는 중장년 생활 안내입니다.",alternates:{canonical:"/"}};
+const paths=[
+ {num:"01",title:"연금과 생활비를 점검하려면",desc:"기초연금 조건부터 내 국민연금 확인까지",slug:"gichoyeongeum-2026-guide",label:"연금 준비"},
+ {num:"02",title:"부모님 돌봄이 필요하다면",desc:"신청 절차와 필요한 도움을 함께 정리하기",slug:"janggiyoyang-bohom-guide",label:"돌봄 준비"},
+ {num:"03",title:"스마트폰에서 자꾸 막힌다면",desc:"글자 크기·사진 전송·주문 완료 확인",slug:"smartphone-kiosk-kakaotalk-guide",label:"디지털 생활"},
+ {num:"04",title:"다시 일할 준비를 한다면",desc:"근무 조건·경력 정리·교육 선택 순서",slug:"jungjangnyeon-jaechwieop-junbi",label:"재취업 준비"}
+];
+export default function Home(){
+ const summaries=posts.map(p=>({id:p.id,title:p.title,slug:p.slug,excerpt:p.excerpt,coverImage:p.coverImage,category:p.category,publishedAt:p.publishedAt,updatedAt:p.updatedAt,readTime:p.readTime,featured:p.featured,tags:p.tags}));
+ return <>
+ <section className="bg-[#15283d] text-white relative overflow-hidden"><div className="absolute -right-32 -top-32 w-96 h-96 rounded-full border-[50px] border-white/5 pointer-events-none" aria-hidden="true"/><div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-20 grid lg:grid-cols-[1.3fr_1fr] gap-10"><div><p className="text-sm font-bold tracking-widest text-amber-200 mb-5">중장년 생활·정책 길잡이</p><h1 className="text-4xl md:text-5xl font-black leading-[1.3] break-keep">복잡한 제도,<br/>내 생활에 맞게<br/><span className="text-[#f2c6a2]">하나씩 확인하세요.</span></h1><p className="mt-6 text-slate-200 text-lg leading-relaxed max-w-xl break-keep">얼마를 받을 수 있는지, 어디에 신청하는지, 무엇을 준비해야 하는지. 연금부터 스마트폰까지 다음 행동을 정리해 드립니다.</p><a href="#guides" className="inline-block mt-7 px-6 py-3 bg-white text-slate-900 rounded-full font-bold hover:bg-slate-100">필요한 글 찾아보기 ↓</a></div><aside className="rounded-3xl bg-white/10 border border-white/15 p-6 sm:p-8 self-center"><p className="text-amber-200 text-sm font-bold mb-3">신청 전에 먼저</p><h2 className="text-2xl font-bold leading-snug mb-5">같은 제도라도<br/>내 조건은 다를 수 있습니다.</h2><ol className="space-y-4 text-slate-100"><li><span className="font-bold text-amber-200 mr-2">1.</span> 내 가구·소득·일정을 정리하기</li><li><span className="font-bold text-amber-200 mr-2">2.</span> 올해 공식 안내와 신청 조건 읽기</li><li><span className="font-bold text-amber-200 mr-2">3.</span> 담당 창구에서 확인하고 기록 남기기</li></ol><Link href="/about" className="inline-block mt-6 underline underline-offset-4 text-sm">자료 확인과 편집 기준 →</Link></aside></div></section>
+ <section className="max-w-6xl mx-auto px-4 sm:px-6 py-10" aria-label="상황별 읽기"><div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">{paths.map(p=><Link key={p.num} href={`/posts/${p.slug}`} className="rounded-2xl border border-slate-200 bg-white p-5 hover:border-red-400 hover:shadow-md transition-shadow"><div className="flex items-center justify-between text-sm mb-5"><span className="font-bold text-red-700">{p.label}</span><span className="text-slate-400">{p.num}</span></div><h2 className="font-bold text-lg break-keep mb-2">{p.title}</h2><p className="text-sm text-slate-600 leading-relaxed">{p.desc}</p><span className="inline-block mt-5 font-bold text-sm text-slate-800">준비 순서 보기 ↗</span></Link>)}</div></section>
+ <section className="max-w-6xl mx-auto px-4 sm:px-6" aria-label="공식 확인 창구"><div className="rounded-2xl bg-[#f8f4ee] border border-[#ece2d5] p-5 sm:p-6 flex flex-wrap gap-5 items-center justify-between"><div><h2 className="font-bold text-lg">실제 신청과 상담은 공식 창구에서</h2><p className="text-sm text-slate-600 mt-1">이 사이트는 신청 대행이나 개인별 수급 판정을 하지 않습니다.</p></div><div className="flex flex-wrap gap-3 text-sm font-semibold">{[["복지로","https://www.bokjiro.go.kr/"],["국민연금공단","https://www.nps.or.kr/"],["고용24","https://www.work24.go.kr/"],["정부24","https://www.gov.kr/"]].map(([label,url])=><a key={url} href={url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">{label} ↗</a>)}</div></div></section>
+ <div id="guides" className="scroll-mt-20"><PostGrid posts={summaries}/></div>
+ </>;
 }

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPolicyPage() {
-  const updated = "2026년 6월 6일";
+  const updated = "2026년 10월 3일";
 
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-16">
@@ -20,15 +20,17 @@ export default function PrivacyPolicyPage() {
           <p>
             한국에서 살아남기(&lsquo;저희&rsquo;)는 <strong>survivekorea.com</strong> 웹사이트를 운영합니다.
             본 개인정보처리방침은 저희가 어떤 정보를 수집하고, 왜 수집하며, 어떻게 이용하는지를
-            설명합니다. 본 사이트를 이용하시면 여기에 설명된 내용에 동의하시는 것으로 간주합니다.
+            설명합니다. 문의 기능과 광고 등 사이트 이용 중의 정보 처리를 안내합니다.
           </p>
         </section>
 
         <section>
           <h2 className="text-base font-bold text-gray-800 mb-2">2. 수집하는 정보</h2>
           <p>
-            저희는 이름·연락처 등 <strong>개인을 식별할 수 있는 정보를 직접 수집하지 않습니다.</strong>{" "}
-            다만 본 사이트에 삽입된 제3자 서비스가 다음 정보를 자동으로 수집할 수 있습니다.
+            회원가입 기능은 제공하지 않습니다. 글 검색어와 준비 체크는 서버에 전송하거나 저장하지
+            않습니다. 문의 양식은 작성 내용을 메일 앱으로 전달하며, 사용자가 메일을 보내면
+            이름·이메일과 문의 내용이 운영자에게 전달됩니다. 광고 및 호스팅 서비스는 접속 관련
+            정보를 처리할 수 있습니다.
           </p>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>IP 주소(정확한 위치가 아닌 대략적 위치)</li>
@@ -73,27 +75,13 @@ export default function PrivacyPolicyPage() {
           </p>
         </section>
 
-        <section>
-          <h2 className="text-base font-bold text-gray-800 mb-2">4. 구글 애널리틱스</h2>
-          <p>
-            저희는 방문자가 사이트를 어떻게 이용하는지(예: 어떤 글이 유용한지, 어디서 유입되는지)를
-            파악하기 위해 <strong>구글 애널리틱스(Google Analytics)</strong>를 사용할 수 있습니다.
-            이 데이터는 익명으로 집계되며, 저희가 개인을 식별할 수는 없습니다.
-          </p>
-          <p className="mt-2">
-            구글 애널리틱스 추적은{" "}
-            <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-900" style={{ color: "#cd2e3a" }}>
-              구글 애널리틱스 차단 브라우저 부가기능
-            </a>{" "}
-            을 설치해 거부할 수 있습니다.
-          </p>
-        </section>
+        <section><h2 className="text-base font-bold text-gray-800 mb-2">4. 문의와 읽기 도구</h2><p>문의 내용은 질문 응답과 오류 확인에 이용합니다. 삭제 등 문의는 아래 연락처로 요청할 수 있습니다. 상세 의료기록, 주민등록번호와 금융 인증정보는 보내지 마세요. 본문 글씨 확대와 체크 상태는 현재 화면에서만 사용하며 새로 열면 초기화됩니다.</p></section>
 
         <section>
           <h2 className="text-base font-bold text-gray-800 mb-2">5. 쿠키</h2>
           <p>
-            쿠키는 기기에 저장되는 작은 텍스트 파일입니다. 본 사이트는 구글 애드센스, 구글
-            애널리틱스 같은 제3자 서비스를 통해 쿠키를 사용할 수 있습니다. 쿠키는 언제든지 브라우저
+            쿠키는 기기에 저장되는 작은 텍스트 파일입니다. 본 사이트에 연결된 구글 애드센스 등
+            제3자 광고 서비스는 쿠키를 사용할 수 있습니다. 쿠키는 언제든지 브라우저
             설정에서 관리하거나 삭제할 수 있습니다.
           </p>
           <p className="mt-2">브라우저별 쿠키 설정 위치:</p>
@@ -119,8 +107,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="text-base font-bold text-gray-800 mb-2">7. 방침의 변경</h2>
           <p>
             본 개인정보처리방침은 수시로 변경될 수 있습니다. 변경 시 상단의 &lsquo;최종 업데이트&rsquo;
-            날짜를 갱신합니다. 변경 이후에도 사이트를 계속 이용하시면 변경 사항에 동의하신 것으로
-            간주합니다.
+            날짜를 갱신합니다. 실제 기능이나 정보 처리 방식이 바뀌면 관련 내용도 수정합니다.
           </p>
         </section>
 

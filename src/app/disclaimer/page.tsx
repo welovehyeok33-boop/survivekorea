@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function DisclaimerPage() {
-  const updated = "2026년 6월 6일";
+  const updated = "2026년 10월 3일";
 
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-16">
@@ -42,7 +42,7 @@ export default function DisclaimerPage() {
             <li>보건복지부 · 복지로 (<span className="font-mono">bokjiro.go.kr</span>, 상담 129)</li>
             <li>국민연금공단 (<span className="font-mono">nps.or.kr</span>, 상담 1355)</li>
             <li>국민건강보험공단 (<span className="font-mono">nhis.or.kr</span>, 상담 1577-1000)</li>
-            <li>고용노동부 · HRD-Net (<span className="font-mono">hrd.go.kr</span>, 상담 1350)</li>
+            <li>고용노동부 · 고용24 (<span className="font-mono">work24.go.kr</span>, 상담 1350)</li>
           </ul>
           <p className="mt-2">
             개인별 상황에 대해서는 주민센터, 해당 공공기관, 또는 자격을 갖춘 전문가와 직접

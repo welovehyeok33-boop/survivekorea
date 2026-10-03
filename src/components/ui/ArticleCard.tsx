@@ -4,7 +4,7 @@ import type { Post } from "@/types";
 import { getCategoryById } from "@/data/categories";
 
 interface Props {
-  post: Post;
+  post: Omit<Post, "content" | "checklist">;
   size?: "default" | "large" | "horizontal";
 }
 
@@ -17,7 +17,7 @@ export default function ArticleCard({ post, size = "default" }: Props) {
       <Link
         href={`/posts/${post.slug}`}
         className="group relative block rounded-3xl overflow-hidden bg-gray-900"
-        style={{ aspectRatio: "21/9" }}
+        style={{ minHeight: "380px" }}
       >
         <Image
           src={post.coverImage}

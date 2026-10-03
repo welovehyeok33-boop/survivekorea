@@ -20,5 +20,6 @@ export interface Post {
   readTime: number;
   featured?: boolean;
   tags?: string[];
+  checklist?: string[];
   content?: string; // HTML content (English)
 }

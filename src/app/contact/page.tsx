@@ -12,7 +12,7 @@ export default function ContactPage() {
       <h1 className="text-3xl font-black text-gray-900 mb-2">문의하기</h1>
       <p className="text-gray-500 mb-10 text-sm leading-relaxed">
         잘못된 정보를 발견하셨나요? 궁금한 점이 있으신가요? 다뤄 줬으면 하는 주제가 있으신가요?<br />
-        메시지를 남겨 주세요. 모든 메시지를 읽습니다.
+        글 주소와 확인할 내용을 알려 주세요. 버튼을 누르면 메일 앱이 열리며 직접 전송해야 접수됩니다. 주민등록번호·계좌번호·상세 의료기록은 보내지 마세요.
       </p>
 
       <ContactForm />

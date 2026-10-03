@@ -1,73 +1,16 @@
 "use client";
-
 import { useState } from "react";
-import { posts } from "@/data/posts";
+import type { Post } from "@/types";
+import { categories } from "@/data/categories";
 import ArticleCard from "@/components/ui/ArticleCard";
-import CategoryFilter from "@/components/ui/CategoryFilter";
-
-const PAGE_SIZE = 6;
-
-export default function PostGrid() {
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
-
-  const nonFeatured = posts.filter((p) => !p.featured);
-  const filtered = activeCategory
-    ? nonFeatured.filter((p) => p.category === activeCategory)
-    : nonFeatured;
-
-  const visible = filtered.slice(0, visibleCount);
-  const hasMore = visibleCount < filtered.length;
-
-  function handleFilter(id: string | null) {
-    setActiveCategory(id);
-    setVisibleCount(PAGE_SIZE);
-  }
-
-  return (
-    <section className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
-      {/* Header row */}
-      <div className="flex items-end justify-between mb-6">
-        <div>
-          <p className="text-xs font-bold uppercase tracking-widest text-emerald-500 mb-1">최신 정보</p>
-          <h2 className="text-2xl font-black text-gray-900">지금 많이 보는 글</h2>
-        </div>
-      </div>
-
-      {/* Filter pills */}
-      <div className="mb-8">
-        <CategoryFilter onFilter={handleFilter} />
-      </div>
-
-      {/* Grid */}
-      {visible.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {visible.map((post) => (
-            <ArticleCard key={post.id} post={post} />
-          ))}
-        </div>
-      ) : (
-        <div className="flex flex-col items-center justify-center py-20 text-center">
-          <span className="text-5xl mb-4">🔍</span>
-          <p className="text-gray-400 font-medium">아직 이 카테고리에 글이 없습니다.</p>
-          <p className="text-gray-300 text-sm mt-1">곧 새 글로 찾아뵙겠습니다!</p>
-        </div>
-      )}
-
-      {/* Load more */}
-      {hasMore && (
-        <div className="flex justify-center mt-10">
-          <button
-            onClick={() => setVisibleCount((n) => n + PAGE_SIZE)}
-            className="group flex items-center gap-2 px-8 py-3 rounded-full border-2 border-gray-200 text-sm font-bold text-gray-600 hover:border-emerald-400 hover:text-emerald-600 hover:bg-emerald-50 transition-all duration-200"
-          >
-            글 더 보기
-            <svg className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-        </div>
-      )}
-    </section>
-  );
+export default function PostGrid({ posts }: { posts: Omit<Post, "content" | "checklist">[] }) {
+ const [category,setCategory]=useState<string|null>(null),[query,setQuery]=useState(""),[count,setCount]=useState(9);
+ const filtered=posts.filter(p=>(!category||p.category===category)&&`${p.title} ${p.excerpt} ${(p.tags??[]).join(" ")}`.toLowerCase().includes(query.trim().toLowerCase()));
+ return <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12" aria-labelledby="guide-heading">
+ <p className="text-sm font-bold text-red-700 mb-2">생활에 필요한 정보</p><h2 id="guide-heading" className="text-3xl font-black mb-6">궁금한 일부터 찾아보세요</h2>
+ <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6 mb-7"><label htmlFor="post-search" className="block font-bold mb-3">글 검색</label><input id="post-search" type="search" value={query} onChange={e=>{setQuery(e.target.value);setCount(9);}} placeholder="예: 기초연금, 돌봄, 서류, 스마트폰" className="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-base mb-4"/><div className="flex flex-wrap gap-2" aria-label="글 분야">{[{id:null,label:"전체"},...categories].map(c=><button key={c.id??"all"} aria-pressed={category===c.id} onClick={()=>{setCategory(c.id);setCount(9);}} className={`px-4 py-2 rounded-full border text-sm font-semibold ${category===c.id?"bg-slate-900 text-white border-slate-900":"bg-white text-slate-700 border-slate-300 hover:border-slate-700"}`}>{c.label}</button>)}</div></div>
+ <p role="status" className="text-sm text-slate-600 mb-5">{filtered.length}개의 글{query.trim()?` · ‘${query.trim()}’ 검색 결과`:""}</p>
+ {filtered.length?<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">{filtered.slice(0,count).map(p=><ArticleCard key={p.id} post={p}/>)}</div>:<div className="rounded-xl border border-slate-200 p-8 text-center"><p className="mb-4">검색된 글이 없습니다. 단어를 짧게 바꾸거나 다른 분야를 선택해 보세요.</p><button className="underline font-bold" onClick={()=>{setQuery("");setCategory(null);setCount(9);}}>전체 글 보기</button></div>}
+ {count<filtered.length&&<div className="mt-8 text-center"><button onClick={()=>setCount(n=>n+9)} className="rounded-full border border-slate-300 px-8 py-3 font-bold hover:bg-slate-50">글 더 보기 ({filtered.length-Math.min(count,filtered.length)}개 남음)</button></div>}
+ </section>;
 }

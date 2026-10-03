@@ -31,9 +31,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 img {
@@ -72,6 +74,8 @@ img {
   color: #374151;
   line-height: 1.85;
   font-size: 1.125rem;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 .article-body h2 {
   font-size: 1.55rem;
@@ -164,4 +168,17 @@ img {
 }
 .article-body .post-sources ul {
   margin-bottom: 0.5rem;
+}
+
+.reading-large .article-body { font-size: 1.35rem; line-height: 1.95; }
+.article-body .post-sources h2 { margin-top: 0; font-size: 1.1rem; }
+:focus-visible { outline: 3px solid #1b4fa0; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print {
+  header, footer, article > aside { display: none !important; }
+  article { max-width: none !important; padding: 0 !important; }
+  .article-body { color: black; font-size: 11pt; line-height: 1.65; }
+  .article-body h2 { break-after: avoid; }
+  .article-body .post-sources { break-inside: avoid; }
+  nav[aria-label="이 글의 순서"] { display: none; }
 }

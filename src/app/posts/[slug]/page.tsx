@@ -5,6 +5,7 @@ import Link from "next/link";
 import { posts, getPostBySlug } from "@/data/posts";
 import { getCategoryById } from "@/data/categories";
 import { author } from "@/data/author";
+import ReaderTools from "@/components/ui/ReaderTools";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -50,7 +51,7 @@ export default async function PostPage({ params }: Props) {
   // heading an id so the TOC links can jump to it.
   const toc: { id: string; text: string }[] = [];
   let headingIndex = 0;
-  const bodyHtml = (post.content ?? "").replace(
+  const bodyHtml = (post.content ?? "").replace(/^<p>[\s\S]*?<\/p>/, "").replace(
     /<h2>(.*?)<\/h2>/g,
     (_match, inner: string) => {
       const id = `section-${headingIndex++}`;
@@ -71,7 +72,7 @@ export default async function PostPage({ params }: Props) {
     dateModified: post.updatedAt ?? post.publishedAt,
     inLanguage: "ko",
     author: {
-      "@type": "Person",
+      "@type": "Organization",
       name: author.name,
       url: `${BASE_URL}/about`,
     },
@@ -149,12 +150,12 @@ export default async function PostPage({ params }: Props) {
       )}
 
       {/* Title */}
-      <h1 className="text-3xl sm:text-4xl font-black text-gray-900 leading-tight mt-3 mb-4">
+      <h1 className="text-3xl sm:text-4xl font-black text-gray-900 leading-tight mt-3 mb-4 break-keep">
         {post.title}
       </h1>
 
       {/* Meta row */}
-      <div className="flex items-center gap-4 text-sm text-gray-400 mb-6 pb-6 border-b border-gray-100">
+      <div className="flex flex-wrap items-center gap-2 text-sm text-gray-600 mb-6 pb-6 border-b border-gray-100">
         <span className="font-semibold text-gray-600">{author.name}</span>
         <span>·</span>
         <span>{post.publishedAt}</span>
@@ -180,8 +181,9 @@ export default async function PostPage({ params }: Props) {
         )}
       </div>
 
-      {/* Cover image */}
-      <div className="relative rounded-2xl overflow-hidden mb-10" style={{ aspectRatio: "16/9" }}>
+      <details className="mb-8 print:hidden">
+        <summary className="text-sm text-slate-600 cursor-pointer">관련 이미지 보기 (내용 이해를 돕는 자료 사진)</summary>
+      <div className="relative rounded-2xl overflow-hidden mt-3" style={{ aspectRatio: "16/9" }}>
         <Image
           src={post.coverImage}
           alt={post.title}
@@ -193,7 +195,9 @@ export default async function PostPage({ params }: Props) {
       </div>
 
       {/* Article body */}
+      </details>
       <div className="prose prose-gray max-w-none">
+        {post.checklist && <ReaderTools items={post.checklist} />}
         <p className="text-xl text-gray-600 leading-relaxed font-medium border-l-4 pl-4 mb-8" style={{ borderColor: "#cd2e3a" }}>
           {post.excerpt}
         </p>
@@ -204,10 +208,11 @@ export default async function PostPage({ params }: Props) {
             aria-label="이 글의 순서"
             className="mb-10 rounded-2xl border border-gray-100 bg-gray-50 p-5 sm:p-6"
           >
-            <p className="text-sm font-black text-gray-900 mb-3 flex items-center gap-2">
+            <details>
+            <summary className="text-base font-black text-gray-900 cursor-pointer">
               <span className="text-base">📑</span> 이 글의 순서
-            </p>
-            <ol className="space-y-2">
+            </summary>
+            <ol className="space-y-3 mt-4">
               {toc.map((item, i) => (
                 <li key={item.id} className="flex gap-2.5 text-[15px] leading-snug">
                   <span className="font-bold shrink-0" style={{ color: "#cd2e3a" }}>
@@ -222,6 +227,7 @@ export default async function PostPage({ params }: Props) {
                 </li>
               ))}
             </ol>
+            </details>
           </nav>
         )}
 
