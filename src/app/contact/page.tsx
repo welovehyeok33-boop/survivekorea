@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/ui/ContactForm";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "문의하기 – 한국에서 살아남기",
   description: "한국에서 살아남기에 궁금한 점, 잘못된 정보 제보, 다뤄 줬으면 하는 주제를 알려 주세요.",
 };

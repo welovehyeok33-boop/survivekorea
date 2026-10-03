@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/disclaimer" },
   title: "면책조항 – 한국에서 살아남기",
   description:
     "한국에서 살아남기(survivekorea.com)의 면책조항 — 본 사이트의 콘텐츠는 일반적인 정보 제공용이며 법률·금융·의료 등 전문적 조언이 아닙니다.",

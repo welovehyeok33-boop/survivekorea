@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/privacy-policy" },
   title: "개인정보처리방침 – 한국에서 살아남기",
   description: "한국에서 살아남기(survivekorea.com)의 개인정보처리방침 — 정보 수집·이용·보호 방식을 안내합니다.",
 };

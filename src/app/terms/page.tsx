@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/terms" },
   title: "이용약관 – 한국에서 살아남기",
   description:
     "한국에서 살아남기(survivekorea.com)의 이용약관 — 사이트와 콘텐츠 이용에 관한 규정을 안내합니다.",
