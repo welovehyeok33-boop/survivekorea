@@ -51,6 +51,7 @@ export default function Footer() {
             <h4 className="text-white text-xs font-bold uppercase tracking-widest mb-4">사이트</h4>
             <ul className="space-y-2">
               {[
+                { href: "/tools/life-checklist", label: "생활·정책 상담 준비표" },
                 { href: "/about", label: "소개" },
                 { href: "/contact", label: "문의하기" },
                 { href: "/privacy-policy", label: "개인정보처리방침" },
