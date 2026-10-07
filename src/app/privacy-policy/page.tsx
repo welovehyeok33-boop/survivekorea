@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPolicyPage() {
-  const updated = "2026년 10월 3일";
+  const updated = "2026년 10월 7일";
 
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-16">
@@ -50,7 +50,7 @@ export default function PrivacyPolicyPage() {
             제공하기 위해 쿠키를 사용합니다.
           </p>
           <ul className="list-disc pl-5 mt-2 space-y-1">
-            <li>구글은 관심 기반 광고를 위해 <strong>DoubleClick 쿠키</strong>를 사용할 수 있습니다.</li>
+            <li>Google의 광고 쿠키는 Google과 파트너사의 맞춤 광고 제공에 사용될 수 있습니다.</li>
             <li>구글을 포함한 제3자 업체는 사용자의 이전 방문 기록을 바탕으로 광고를 제공합니다.</li>
             <li>
               맞춤형 광고는{" "}
@@ -76,7 +76,7 @@ export default function PrivacyPolicyPage() {
           </p>
         </section>
 
-        <section><h2 className="text-base font-bold text-gray-800 mb-2">4. 문의와 읽기 도구</h2><p>문의 내용은 질문 응답과 오류 확인에 이용합니다. 삭제 등 문의는 아래 연락처로 요청할 수 있습니다. 상세 의료기록, 주민등록번호와 금융 인증정보는 보내지 마세요. 본문 글씨 확대와 체크 상태는 현재 화면에서만 사용하며 새로 열면 초기화됩니다.</p></section>
+        <section><h2 className="text-base font-bold text-gray-800 mb-2">4. 문의와 읽기 도구</h2><p>문의 내용은 질문 응답과 오류 확인에 이용합니다. 삭제 등 문의는 아래 연락처로 요청할 수 있습니다. 상세 의료기록, 주민등록번호와 금융 인증정보는 보내지 마세요. 상담 주제·기록·체크 상태는 현재 화면에서 처리하며, 도구는 입력을 서버·URL·쿠키·로컬 저장소에 자동 저장하지 않습니다. 복사는 기기 클립보드에, 저장은 텍스트 파일에 내용을 전달합니다. 인쇄·PDF는 브라우저 기능을 사용합니다. 저장·공유한 내용은 이용자가 관리합니다. 본문 글씨 확대와 체크 상태도 현재 화면에서만 사용합니다.</p></section>
 
         <section>
           <h2 className="text-base font-bold text-gray-800 mb-2">5. 쿠키</h2>
