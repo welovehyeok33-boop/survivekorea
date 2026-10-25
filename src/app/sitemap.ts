@@ -6,8 +6,8 @@ const BASE_URL = "https://www.survivekorea.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/tools/life-checklist`, lastModified: "2026-10-05", changeFrequency: "monthly", priority: 0.8 },
-    { url: BASE_URL, lastModified: "2026-10-03", changeFrequency: "weekly", priority: 1 },
+    { url: `${BASE_URL}/tools/life-checklist`, lastModified: "2026-10-25", changeFrequency: "monthly", priority: 0.8 },
+    { url: BASE_URL, lastModified: "2026-10-25", changeFrequency: "weekly", priority: 1 },
     { url: `${BASE_URL}/about`, lastModified: "2026-10-03", changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE_URL}/contact`, lastModified: "2026-10-03", changeFrequency: "monthly", priority: 0.3 },
     { url: `${BASE_URL}/privacy-policy`, lastModified: "2026-10-03", changeFrequency: "yearly", priority: 0.2 },
